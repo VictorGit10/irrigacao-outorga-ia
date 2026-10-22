@@ -12,7 +12,7 @@ Tudo aqui vem de fontes públicas, sem login e sem custo. Consultas feitas entre
 
 | Camada | O que é | Feições | Observações |
 |---|---|---|---|
-| `pivos_2020_2023_final` | "Pivôs Centrais 2023 – SEMAD": pivôs mapeados por inspeção visual em imagens PlanetScope (4,7 m) | 5.586 | Principal camada usada. Não tem data por pivô; a data-base é 2020–2023. A soma da coluna `area_ha` dá ~305 mil ha, mas a área dos polígonos dá ~373 mil ha: alguns pivôs estão com a área faltando ou diferente na tabela |
+| `pivos_2020_2023_final` | "Pivôs Centrais 2023 – SEMAD": pivôs mapeados por inspeção visual em imagens PlanetScope (4,7 m) | 5.586 | Principal camada usada. Não tem data por pivô; a data-base é 2020–2023. A soma da coluna `area_ha` dá ~305 mil ha, mas a área dos polígonos dá ~373 mil ha: alguns pivôs estão com a área faltando ou diferente na tabela. Alguns polígonos são só o contorno do pivô ou um pedaço dele (2 dos 18 casos da triagem) |
 | `Pivos_2016` | Pivôs instalados em Goiás e no DF até 2016 (Informe Técnico nº 24/2017) | 3.565 | Usada para medir quanto o mapa muda com o tempo |
 | `Area_Irrigada_Bacia_Sao_Marcos` | Áreas irrigadas da alta bacia do São Marcos | 1.663 | **812 estão fora de Goiás** (Minas Gerais e DF) |
 | `pivos_alto_sao_marcos` | Pivôs do Alto São Marcos: base ANA 2024, atualizada com Planet 2026 | 713 | Tem a cultura de cada pivô |

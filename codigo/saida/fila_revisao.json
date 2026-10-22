@@ -2422,7 +2422,8 @@
      "mesma_subbacia": false,
      "area_declarada_ha": null
     }
-   ]
+   ],
+   "aviso_poligono": "O polígono deste pivô no mapa cobre só parte dele (17 de 148 ha). O contorno amarelo e o gráfico usam essa parte."
   },
   {
    "id": "C-12",
@@ -3318,7 +3319,158 @@
    "chip_2025": "C-16_2025.png",
    "data_2022": "2022-07-28",
    "data_2025": "2025-08-06",
-   "serie": [],
+   "serie": [
+    {
+     "data": "2025-08-09",
+     "pivo": 0.205,
+     "entorno": 0.371
+    },
+    {
+     "data": "2025-08-11",
+     "pivo": 0.207,
+     "entorno": 0.387
+    },
+    {
+     "data": "2025-08-14",
+     "pivo": 0.198,
+     "entorno": 0.38
+    },
+    {
+     "data": "2025-08-16",
+     "pivo": 0.205,
+     "entorno": 0.373
+    },
+    {
+     "data": "2025-08-19",
+     "pivo": 0.203,
+     "entorno": 0.353
+    },
+    {
+     "data": "2025-08-21",
+     "pivo": 0.21,
+     "entorno": 0.376
+    },
+    {
+     "data": "2025-08-24",
+     "pivo": 0.192,
+     "entorno": 0.358
+    },
+    {
+     "data": "2025-08-26",
+     "pivo": 0.196,
+     "entorno": 0.358
+    },
+    {
+     "data": "2025-08-29",
+     "pivo": 0.186,
+     "entorno": 0.336
+    },
+    {
+     "data": "2025-08-31",
+     "pivo": 0.191,
+     "entorno": 0.338
+    },
+    {
+     "data": "2025-09-02",
+     "pivo": 0.18,
+     "entorno": 0.343
+    },
+    {
+     "data": "2025-09-03",
+     "pivo": 0.184,
+     "entorno": 0.341
+    },
+    {
+     "data": "2025-09-05",
+     "pivo": 0.19,
+     "entorno": 0.334
+    },
+    {
+     "data": "2025-09-08",
+     "pivo": 0.194,
+     "entorno": 0.332
+    },
+    {
+     "data": "2025-09-10",
+     "pivo": 0.189,
+     "entorno": 0.333
+    },
+    {
+     "data": "2025-09-12",
+     "pivo": 0.187,
+     "entorno": 0.329
+    },
+    {
+     "data": "2025-09-13",
+     "pivo": 0.187,
+     "entorno": 0.341
+    },
+    {
+     "data": "2025-09-15",
+     "pivo": 0.177,
+     "entorno": 0.298
+    },
+    {
+     "data": "2025-09-18",
+     "pivo": 0.178,
+     "entorno": 0.284
+    },
+    {
+     "data": "2025-09-28",
+     "pivo": 0.165,
+     "entorno": 0.291
+    },
+    {
+     "data": "2025-09-30",
+     "pivo": 0.166,
+     "entorno": 0.29
+    },
+    {
+     "data": "2025-10-02",
+     "pivo": 0.155,
+     "entorno": 0.276
+    },
+    {
+     "data": "2025-10-03",
+     "pivo": 0.158,
+     "entorno": 0.294
+    },
+    {
+     "data": "2025-10-08",
+     "pivo": 0.147,
+     "entorno": 0.286
+    },
+    {
+     "data": "2025-10-10",
+     "pivo": 0.145,
+     "entorno": 0.268
+    },
+    {
+     "data": "2025-10-13",
+     "pivo": 0.145,
+     "entorno": 0.31
+    },
+    {
+     "data": "2025-10-23",
+     "pivo": 0.147,
+     "entorno": 0.324
+    },
+    {
+     "data": "2025-10-25",
+     "pivo": 0.131,
+     "entorno": 0.314
+    },
+    {
+     "data": "2025-10-28",
+     "pivo": 0.147,
+     "entorno": 0.329
+    },
+    {
+     "data": "2025-10-30",
+     "pivo": 0.145,
+     "entorno": 0.331
+    }
+   ],
    "outorgas_proximas": [
     {
      "km": 3.45,

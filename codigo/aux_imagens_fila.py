@@ -177,10 +177,23 @@ def processar(it, gs, arv):
     geom = max(cands, key=lambda g: g.area)
     # Alguns poligonos do mapa sao so o contorno do pivo (um anel fino, quase sem
     # area). Nesses casos, usa a envoltoria convexa, que e o circulo do pivo.
-    ha = geom.area * (111.32e3 ** 2) * math.cos(math.radians(it["lat"])) / 1e4
-    if ha < 0.5 * float(it["area_ha"]):
+    ha = lambda g: g.area * (111.32e3 ** 2) * math.cos(math.radians(it["lat"])) / 1e4
+    alvo = float(it["area_ha"])
+    it.pop("aviso_poligono", None)
+    if ha(geom) < 0.5 * alvo:
+        antes = ha(geom)
         geom = geom.convex_hull
-        log.append(f"   poligono so com o contorno ({ha:.1f} ha): usando a envoltoria convexa")
+        if not 0.8 * alvo <= ha(geom) <= 1.25 * alvo:
+            # nem a envoltoria serve: procura, num raio de ~1 km, um poligono com a area da tabela
+            perto = [gs[i].convex_hull for i in arv.query(pt.buffer(0.01))]
+            melhor = min(perto, key=lambda g: abs(ha(g) - alvo))
+            if 0.8 * alvo <= ha(melhor) <= 1.25 * alvo and melhor.contains(pt):
+                geom = melhor
+            else:
+                it["aviso_poligono"] = (f"O polígono deste pivô no mapa cobre só parte dele ({ha(geom):.0f} de "
+                                        f"{alvo:.0f} ha). O contorno amarelo e o gráfico usam essa parte.")
+        log.append(f"   poligono so com o contorno ({antes:.1f} ha): usando {ha(geom):.0f} ha"
+                   + (" (parcial)" if "aviso_poligono" in it else ""))
     minx, miny, maxx, maxy = geom.bounds
     cx, cy = (minx + maxx) / 2, (miny + maxy) / 2
     lado = max(maxx - minx, maxy - miny) / 2 * 1.9 + 0.006

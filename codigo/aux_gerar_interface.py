@@ -353,7 +353,8 @@ function desenhar(){
     ["Coordenadas", `${fmt(it.lat,5)}, ${fmt(it.lon,5)} · <a href="${maps}" target="_blank" rel="noopener">ver no mapa</a>`],
     ["Sub-bacia (BHO)", esc(it.subbacia) || "—"],
     ["Origem do polígono", esc(it.camadas) + " (SEMAD)"],
-  ].map(x => `<dt>${x[0]}</dt><dd>${x[1]}</dd>`).join("");
+  ].map(x => `<dt>${x[0]}</dt><dd>${x[1]}</dd>`).join("") +
+    (it.aviso_poligono ? `<dt>Atenção</dt><dd>${esc(it.aviso_poligono)}</dd>` : "");
   const regra = it.ato_num
     ? `O ato mais próximo na mesma sub-bacia (${esc(it.ato_num)}, a ${fmt(it.ato_km)} km) não atende à regra
        de distância ou de área declarada.`

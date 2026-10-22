@@ -63,6 +63,8 @@ A primeira versão (feita pelo DeepSeek) já tinha o ciclo completo. Testando, f
 
 A fila tem 18 pivôs reais do mapa público, um por município, escolhidos entre os maiores (a partir de 60 ha) de nível C e em rio estadual (`codigo/aux_gerar_fila.py`). Não é uma amostra do estado: serve para demonstrar o ciclo.
 
+Em dois casos o polígono do mapa é só o contorno do pivô ou um pedaço dele. No C-16, o script achou o círculo inteiro numa camada vizinha; no C-11, não, e a página avisa que o contorno e o gráfico usam só a parte mapeada.
+
 Conferindo a fila: em 13 dos 18 casos não há nenhuma outorga de irrigação a até 2 km, em qualquer sub-bacia; nos outros 5, há uma entre 0,9 e 1,8 km. Esses 5 são bons para testar a pergunta "você conhece a outorga deste?".
 
 ## Como funciona por dentro

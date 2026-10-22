@@ -56,7 +56,8 @@ Detalhes: `documentacao/02-dados-publicos.md`.
 6. **Nome do campo do ato:** é `int_nu_ato` (havia um `int_num_ato` errado na fila; corrigido).
 7. **Assinar arquivo por arquivo no Planetary Computer** esbarra no limite de pedidos (até ~27 s por pedido). Use o token da coleção.
 8. **Uma data não basta para detectar** (AUC 0,44). Use a série da estação seca.
-9. **Explicações plausíveis para números errados.** Antes de explicar um número estranho, confira se o dado está certo (foi assim que os pivôs fora de Goiás apareceram).
+9. **Polígonos incompletos.** Alguns pivôs do mapa de 2023 são só o contorno (um anel fino) ou um pedaço do círculo. `aux_imagens_fila.py` trata isso e avisa na página.
+10. **Explicações plausíveis para números errados.** Antes de explicar um número estranho, confira se o dado está certo (foi assim que os pivôs fora de Goiás apareceram).
 
 ## Regras para mexer aqui
 
