@@ -1,0 +1,3874 @@
+{
+ "meta": {
+  "gerado_em": "2026-10-22 07:47",
+  "n": 18,
+  "tipo": "reconciliacao",
+  "nota": "Areas de nivel C: o pivo existe na camada publica, mas o metodo nao localizou outorga compativel. Nao significa 'sem outorga'.",
+  "serie": {
+   "periodo": "2025-04-01 a 2025-10-31",
+   "fonte": "Sentinel-2 L2A, Planetary Computer",
+   "entorno": "anel de 200 a 800 m em volta do pivo, sem os outros pivos mapeados",
+   "nota": "NDVI com desconto do deslocamento de +1000 (baseline >= 04.00) e nuvem removida pela SCL"
+  }
+ },
+ "itens": [
+  {
+   "id": "C-01",
+   "tipo": "R",
+   "lon": -47.278372,
+   "lat": -17.06567,
+   "area_ha": 216.6,
+   "municipio": "Cristalina",
+   "subbacia": "8699972116",
+   "camadas": "Mapa estadual",
+   "ato_num": "",
+   "ato_tipo": "",
+   "ato_sit": "",
+   "ato_mun": "",
+   "ato_km": null,
+   "chip_2022": "C-01_2022.png",
+   "chip_2025": "C-01_2025.png",
+   "data_2022": "2022-09-01",
+   "data_2025": "2025-07-17",
+   "serie": [
+    {
+     "data": "2025-05-18",
+     "pivo": 0.817,
+     "entorno": 0.528
+    },
+    {
+     "data": "2025-05-23",
+     "pivo": 0.814,
+     "entorno": 0.533
+    },
+    {
+     "data": "2025-05-25",
+     "pivo": 0.804,
+     "entorno": 0.526
+    },
+    {
+     "data": "2025-06-07",
+     "pivo": 0.763,
+     "entorno": 0.491
+    },
+    {
+     "data": "2025-06-12",
+     "pivo": 0.734,
+     "entorno": 0.554
+    },
+    {
+     "data": "2025-06-14",
+     "pivo": 0.726,
+     "entorno": 0.499
+    },
+    {
+     "data": "2025-06-22",
+     "pivo": 0.705,
+     "entorno": 0.442
+    },
+    {
+     "data": "2025-06-27",
+     "pivo": 0.686,
+     "entorno": 0.449
+    },
+    {
+     "data": "2025-07-02",
+     "pivo": 0.657,
+     "entorno": 0.363
+    },
+    {
+     "data": "2025-07-04",
+     "pivo": 0.636,
+     "entorno": 0.327
+    },
+    {
+     "data": "2025-07-07",
+     "pivo": 0.627,
+     "entorno": 0.309
+    },
+    {
+     "data": "2025-07-17",
+     "pivo": 0.549,
+     "entorno": 0.263
+    },
+    {
+     "data": "2025-07-22",
+     "pivo": 0.495,
+     "entorno": 0.279
+    },
+    {
+     "data": "2025-07-24",
+     "pivo": 0.479,
+     "entorno": 0.255
+    },
+    {
+     "data": "2025-07-27",
+     "pivo": 0.462,
+     "entorno": 0.26
+    },
+    {
+     "data": "2025-08-01",
+     "pivo": 0.45,
+     "entorno": 0.252
+    },
+    {
+     "data": "2025-08-03",
+     "pivo": 0.43,
+     "entorno": 0.225
+    },
+    {
+     "data": "2025-08-06",
+     "pivo": 0.372,
+     "entorno": 0.229
+    },
+    {
+     "data": "2025-08-11",
+     "pivo": 0.338,
+     "entorno": 0.229
+    },
+    {
+     "data": "2025-08-13",
+     "pivo": 0.307,
+     "entorno": 0.205
+    },
+    {
+     "data": "2025-08-16",
+     "pivo": 0.3,
+     "entorno": 0.203
+    },
+    {
+     "data": "2025-08-21",
+     "pivo": 0.281,
+     "entorno": 0.205
+    },
+    {
+     "data": "2025-08-26",
+     "pivo": 0.273,
+     "entorno": 0.184
+    },
+    {
+     "data": "2025-08-31",
+     "pivo": 0.274,
+     "entorno": 0.197
+    },
+    {
+     "data": "2025-09-02",
+     "pivo": 0.25,
+     "entorno": 0.217
+    },
+    {
+     "data": "2025-09-05",
+     "pivo": 0.267,
+     "entorno": 0.182
+    },
+    {
+     "data": "2025-09-10",
+     "pivo": 0.267,
+     "entorno": 0.233
+    },
+    {
+     "data": "2025-09-12",
+     "pivo": 0.257,
+     "entorno": 0.147
+    },
+    {
+     "data": "2025-09-15",
+     "pivo": 0.242,
+     "entorno": 0.258
+    },
+    {
+     "data": "2025-09-20",
+     "pivo": 0.246,
+     "entorno": 0.198
+    },
+    {
+     "data": "2025-09-30",
+     "pivo": 0.241,
+     "entorno": 0.202
+    },
+    {
+     "data": "2025-10-02",
+     "pivo": 0.237,
+     "entorno": 0.193
+    },
+    {
+     "data": "2025-10-05",
+     "pivo": 0.234,
+     "entorno": 0.191
+    },
+    {
+     "data": "2025-10-10",
+     "pivo": 0.215,
+     "entorno": 0.174
+    },
+    {
+     "data": "2025-10-12",
+     "pivo": 0.216,
+     "entorno": 0.17
+    },
+    {
+     "data": "2025-10-15",
+     "pivo": 0.194,
+     "entorno": 0.172
+    },
+    {
+     "data": "2025-10-22",
+     "pivo": 0.227,
+     "entorno": 0.193
+    },
+    {
+     "data": "2025-10-25",
+     "pivo": 0.237,
+     "entorno": 0.187
+    }
+   ],
+   "outorgas_proximas": []
+  },
+  {
+   "id": "C-02",
+   "tipo": "R",
+   "lon": -51.658426,
+   "lat": -15.38395,
+   "area_ha": 197.5,
+   "municipio": "Jussara",
+   "subbacia": "69542343",
+   "camadas": "Mapa estadual",
+   "ato_num": "",
+   "ato_tipo": "",
+   "ato_sit": "",
+   "ato_mun": "",
+   "ato_km": null,
+   "chip_2022": "C-02_2022.png",
+   "chip_2025": "C-02_2025.png",
+   "data_2022": "2022-09-07",
+   "data_2025": "2025-08-27",
+   "serie": [
+    {
+     "data": "2025-05-19",
+     "pivo": 0.689,
+     "entorno": 0.695
+    },
+    {
+     "data": "2025-05-21",
+     "pivo": 0.696,
+     "entorno": 0.589
+    },
+    {
+     "data": "2025-05-24",
+     "pivo": 0.726,
+     "entorno": 0.582
+    },
+    {
+     "data": "2025-05-31",
+     "pivo": 0.709,
+     "entorno": 0.567
+    },
+    {
+     "data": "2025-06-03",
+     "pivo": 0.689,
+     "entorno": 0.559
+    },
+    {
+     "data": "2025-06-08",
+     "pivo": 0.631,
+     "entorno": 0.563
+    },
+    {
+     "data": "2025-06-10",
+     "pivo": 0.559,
+     "entorno": 0.545
+    },
+    {
+     "data": "2025-06-13",
+     "pivo": 0.49,
+     "entorno": 0.55
+    },
+    {
+     "data": "2025-06-18",
+     "pivo": 0.278,
+     "entorno": 0.552
+    },
+    {
+     "data": "2025-06-20",
+     "pivo": 0.249,
+     "entorno": 0.537
+    },
+    {
+     "data": "2025-06-23",
+     "pivo": 0.217,
+     "entorno": 0.539
+    },
+    {
+     "data": "2025-06-28",
+     "pivo": 0.237,
+     "entorno": 0.548
+    },
+    {
+     "data": "2025-06-30",
+     "pivo": 0.261,
+     "entorno": 0.536
+    },
+    {
+     "data": "2025-07-03",
+     "pivo": 0.225,
+     "entorno": 0.531
+    },
+    {
+     "data": "2025-07-08",
+     "pivo": 0.201,
+     "entorno": 0.532
+    },
+    {
+     "data": "2025-07-10",
+     "pivo": 0.201,
+     "entorno": 0.519
+    },
+    {
+     "data": "2025-07-20",
+     "pivo": 0.307,
+     "entorno": 0.506
+    },
+    {
+     "data": "2025-07-23",
+     "pivo": 0.219,
+     "entorno": 0.498
+    },
+    {
+     "data": "2025-07-30",
+     "pivo": 0.211,
+     "entorno": 0.488
+    },
+    {
+     "data": "2025-08-02",
+     "pivo": 0.178,
+     "entorno": 0.427
+    },
+    {
+     "data": "2025-08-07",
+     "pivo": 0.198,
+     "entorno": 0.481
+    },
+    {
+     "data": "2025-08-09",
+     "pivo": 0.197,
+     "entorno": 0.466
+    },
+    {
+     "data": "2025-08-12",
+     "pivo": 0.271,
+     "entorno": 0.482
+    },
+    {
+     "data": "2025-08-17",
+     "pivo": 0.491,
+     "entorno": 0.456
+    },
+    {
+     "data": "2025-08-19",
+     "pivo": 0.509,
+     "entorno": 0.458
+    },
+    {
+     "data": "2025-08-22",
+     "pivo": 0.646,
+     "entorno": 0.461
+    },
+    {
+     "data": "2025-08-27",
+     "pivo": 0.638,
+     "entorno": 0.444
+    },
+    {
+     "data": "2025-08-29",
+     "pivo": 0.657,
+     "entorno": 0.427
+    },
+    {
+     "data": "2025-09-01",
+     "pivo": 0.701,
+     "entorno": 0.436
+    },
+    {
+     "data": "2025-09-06",
+     "pivo": 0.67,
+     "entorno": 0.448
+    },
+    {
+     "data": "2025-09-08",
+     "pivo": 0.66,
+     "entorno": 0.435
+    },
+    {
+     "data": "2025-09-11",
+     "pivo": 0.664,
+     "entorno": 0.441
+    },
+    {
+     "data": "2025-09-16",
+     "pivo": 0.667,
+     "entorno": 0.467
+    },
+    {
+     "data": "2025-09-21",
+     "pivo": 0.735,
+     "entorno": 0.44
+    },
+    {
+     "data": "2025-09-26",
+     "pivo": 0.755,
+     "entorno": 0.46
+    },
+    {
+     "data": "2025-09-28",
+     "pivo": 0.748,
+     "entorno": 0.447
+    },
+    {
+     "data": "2025-10-06",
+     "pivo": 0.633,
+     "entorno": 0.449
+    },
+    {
+     "data": "2025-10-08",
+     "pivo": 0.575,
+     "entorno": 0.378
+    },
+    {
+     "data": "2025-10-11",
+     "pivo": 0.591,
+     "entorno": 0.444
+    },
+    {
+     "data": "2025-10-26",
+     "pivo": 0.555,
+     "entorno": 0.454
+    },
+    {
+     "data": "2025-10-28",
+     "pivo": 0.292,
+     "entorno": 0.271
+    }
+   ],
+   "outorgas_proximas": []
+  },
+  {
+   "id": "C-03",
+   "tipo": "R",
+   "lon": -51.508584,
+   "lat": -17.443402,
+   "area_ha": 173.6,
+   "municipio": "Rio Verde",
+   "subbacia": "869449465",
+   "camadas": "Mapa estadual",
+   "ato_num": "",
+   "ato_tipo": "",
+   "ato_sit": "",
+   "ato_mun": "",
+   "ato_km": null,
+   "chip_2022": "C-03_2022.png",
+   "chip_2025": "C-03_2025.png",
+   "data_2022": "2022-08-13",
+   "data_2025": "2025-09-06",
+   "serie": [
+    {
+     "data": "2025-04-01",
+     "pivo": 0.298,
+     "entorno": 0.571
+    },
+    {
+     "data": "2025-04-09",
+     "pivo": 0.376,
+     "entorno": 0.579
+    },
+    {
+     "data": "2025-04-21",
+     "pivo": 0.374,
+     "entorno": 0.694
+    },
+    {
+     "data": "2025-05-01",
+     "pivo": 0.383,
+     "entorno": 0.643
+    },
+    {
+     "data": "2025-05-04",
+     "pivo": 0.403,
+     "entorno": 0.636
+    },
+    {
+     "data": "2025-05-09",
+     "pivo": 0.44,
+     "entorno": 0.641
+    },
+    {
+     "data": "2025-05-14",
+     "pivo": 0.516,
+     "entorno": 0.662
+    },
+    {
+     "data": "2025-05-19",
+     "pivo": 0.544,
+     "entorno": 0.66
+    },
+    {
+     "data": "2025-05-24",
+     "pivo": 0.561,
+     "entorno": 0.651
+    },
+    {
+     "data": "2025-06-03",
+     "pivo": 0.614,
+     "entorno": 0.635
+    },
+    {
+     "data": "2025-06-08",
+     "pivo": 0.616,
+     "entorno": 0.598
+    },
+    {
+     "data": "2025-06-13",
+     "pivo": 0.634,
+     "entorno": 0.593
+    },
+    {
+     "data": "2025-06-18",
+     "pivo": 0.619,
+     "entorno": 0.555
+    },
+    {
+     "data": "2025-06-20",
+     "pivo": 0.603,
+     "entorno": 0.524
+    },
+    {
+     "data": "2025-06-28",
+     "pivo": 0.61,
+     "entorno": 0.496
+    },
+    {
+     "data": "2025-06-30",
+     "pivo": 0.596,
+     "entorno": 0.484
+    },
+    {
+     "data": "2025-07-03",
+     "pivo": 0.466,
+     "entorno": 0.458
+    },
+    {
+     "data": "2025-07-08",
+     "pivo": 0.331,
+     "entorno": 0.423
+    },
+    {
+     "data": "2025-07-10",
+     "pivo": 0.252,
+     "entorno": 0.407
+    },
+    {
+     "data": "2025-07-13",
+     "pivo": 0.207,
+     "entorno": 0.385
+    },
+    {
+     "data": "2025-07-18",
+     "pivo": 0.169,
+     "entorno": 0.369
+    },
+    {
+     "data": "2025-07-20",
+     "pivo": 0.164,
+     "entorno": 0.359
+    },
+    {
+     "data": "2025-07-23",
+     "pivo": 0.151,
+     "entorno": 0.347
+    },
+    {
+     "data": "2025-07-28",
+     "pivo": 0.172,
+     "entorno": 0.333
+    },
+    {
+     "data": "2025-07-30",
+     "pivo": 0.159,
+     "entorno": 0.364
+    },
+    {
+     "data": "2025-08-07",
+     "pivo": 0.137,
+     "entorno": 0.339
+    },
+    {
+     "data": "2025-08-09",
+     "pivo": 0.134,
+     "entorno": 0.333
+    },
+    {
+     "data": "2025-08-12",
+     "pivo": 0.148,
+     "entorno": 0.347
+    },
+    {
+     "data": "2025-08-17",
+     "pivo": 0.123,
+     "entorno": 0.278
+    },
+    {
+     "data": "2025-08-19",
+     "pivo": 0.125,
+     "entorno": 0.29
+    },
+    {
+     "data": "2025-08-22",
+     "pivo": 0.13,
+     "entorno": 0.294
+    },
+    {
+     "data": "2025-08-27",
+     "pivo": 0.114,
+     "entorno": 0.278
+    },
+    {
+     "data": "2025-08-29",
+     "pivo": 0.117,
+     "entorno": 0.265
+    },
+    {
+     "data": "2025-09-01",
+     "pivo": 0.114,
+     "entorno": 0.278
+    },
+    {
+     "data": "2025-09-06",
+     "pivo": 0.123,
+     "entorno": 0.277
+    },
+    {
+     "data": "2025-09-08",
+     "pivo": 0.121,
+     "entorno": 0.272
+    },
+    {
+     "data": "2025-09-11",
+     "pivo": 0.141,
+     "entorno": 0.269
+    },
+    {
+     "data": "2025-09-16",
+     "pivo": 0.125,
+     "entorno": 0.24
+    },
+    {
+     "data": "2025-09-18",
+     "pivo": 0.132,
+     "entorno": 0.256
+    },
+    {
+     "data": "2025-09-21",
+     "pivo": 0.115,
+     "entorno": 0.247
+    },
+    {
+     "data": "2025-09-26",
+     "pivo": 0.119,
+     "entorno": 0.254
+    },
+    {
+     "data": "2025-09-28",
+     "pivo": 0.118,
+     "entorno": 0.25
+    },
+    {
+     "data": "2025-10-06",
+     "pivo": 0.105,
+     "entorno": 0.237
+    },
+    {
+     "data": "2025-10-11",
+     "pivo": 0.107,
+     "entorno": 0.246
+    },
+    {
+     "data": "2025-10-21",
+     "pivo": 0.134,
+     "entorno": 0.278
+    },
+    {
+     "data": "2025-10-26",
+     "pivo": 0.111,
+     "entorno": 0.331
+    }
+   ],
+   "outorgas_proximas": [
+    {
+     "km": 3.23,
+     "ato": "382021",
+     "captacao": "Captação superficial em barragem",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 3.23,
+     "ato": "392021",
+     "captacao": "Captação superficial em barragem",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    }
+   ]
+  },
+  {
+   "id": "C-04",
+   "tipo": "R",
+   "lon": -47.820731,
+   "lat": -17.397631,
+   "area_ha": 166.8,
+   "municipio": "Campo Alegre de Goiás",
+   "subbacia": "86999329924",
+   "camadas": "Mapa estadual, Bacia Sao Marcos",
+   "ato_num": "",
+   "ato_tipo": "",
+   "ato_sit": "",
+   "ato_mun": "",
+   "ato_km": null,
+   "chip_2022": "C-04_2022.png",
+   "chip_2025": "C-04_2025.png",
+   "data_2022": "2022-08-27",
+   "data_2025": "2025-08-26",
+   "serie": [
+    {
+     "data": "2025-05-05",
+     "pivo": 0.791,
+     "entorno": 0.324
+    },
+    {
+     "data": "2025-05-08",
+     "pivo": 0.772,
+     "entorno": 0.329
+    },
+    {
+     "data": "2025-05-18",
+     "pivo": 0.744,
+     "entorno": 0.36
+    },
+    {
+     "data": "2025-05-23",
+     "pivo": 0.737,
+     "entorno": 0.238
+    },
+    {
+     "data": "2025-05-25",
+     "pivo": 0.68,
+     "entorno": 0.41
+    },
+    {
+     "data": "2025-06-07",
+     "pivo": 0.535,
+     "entorno": 0.21
+    },
+    {
+     "data": "2025-06-12",
+     "pivo": 0.486,
+     "entorno": 0.228
+    },
+    {
+     "data": "2025-06-14",
+     "pivo": 0.47,
+     "entorno": 0.216
+    },
+    {
+     "data": "2025-06-17",
+     "pivo": 0.468,
+     "entorno": 0.331
+    },
+    {
+     "data": "2025-06-22",
+     "pivo": 0.349,
+     "entorno": 0.167
+    },
+    {
+     "data": "2025-06-27",
+     "pivo": 0.286,
+     "entorno": 0.147
+    },
+    {
+     "data": "2025-07-02",
+     "pivo": 0.216,
+     "entorno": 0.141
+    },
+    {
+     "data": "2025-07-04",
+     "pivo": 0.215,
+     "entorno": 0.16
+    },
+    {
+     "data": "2025-07-07",
+     "pivo": 0.202,
+     "entorno": 0.139
+    },
+    {
+     "data": "2025-07-17",
+     "pivo": 0.178,
+     "entorno": 0.159
+    },
+    {
+     "data": "2025-07-22",
+     "pivo": 0.16,
+     "entorno": 0.16
+    },
+    {
+     "data": "2025-07-24",
+     "pivo": 0.162,
+     "entorno": 0.173
+    },
+    {
+     "data": "2025-07-27",
+     "pivo": 0.152,
+     "entorno": 0.176
+    },
+    {
+     "data": "2025-08-01",
+     "pivo": 0.167,
+     "entorno": 0.15
+    },
+    {
+     "data": "2025-08-06",
+     "pivo": 0.204,
+     "entorno": 0.154
+    },
+    {
+     "data": "2025-08-11",
+     "pivo": 0.284,
+     "entorno": 0.157
+    },
+    {
+     "data": "2025-08-13",
+     "pivo": 0.335,
+     "entorno": 0.148
+    },
+    {
+     "data": "2025-08-16",
+     "pivo": 0.368,
+     "entorno": 0.154
+    },
+    {
+     "data": "2025-08-21",
+     "pivo": 0.425,
+     "entorno": 0.136
+    },
+    {
+     "data": "2025-08-26",
+     "pivo": 0.508,
+     "entorno": 0.14
+    },
+    {
+     "data": "2025-08-31",
+     "pivo": 0.525,
+     "entorno": 0.146
+    },
+    {
+     "data": "2025-09-02",
+     "pivo": 0.543,
+     "entorno": 0.16
+    },
+    {
+     "data": "2025-09-10",
+     "pivo": 0.562,
+     "entorno": 0.13
+    },
+    {
+     "data": "2025-09-15",
+     "pivo": 0.556,
+     "entorno": 0.135
+    },
+    {
+     "data": "2025-09-30",
+     "pivo": 0.292,
+     "entorno": 0.181
+    },
+    {
+     "data": "2025-10-10",
+     "pivo": 0.17,
+     "entorno": 0.156
+    },
+    {
+     "data": "2025-10-15",
+     "pivo": 0.175,
+     "entorno": 0.183
+    }
+   ],
+   "outorgas_proximas": [
+    {
+     "km": 1.16,
+     "ato": "9422015",
+     "captacao": "Barramento",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 2.1,
+     "ato": "9432015",
+     "captacao": "Barramento",
+     "situacao": "Não instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 3.47,
+     "ato": "9412015",
+     "captacao": "Barramento",
+     "situacao": "Não instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    }
+   ]
+  },
+  {
+   "id": "C-05",
+   "tipo": "R",
+   "lon": -47.683513,
+   "lat": -16.36134,
+   "area_ha": 142.7,
+   "municipio": "Luziânia",
+   "subbacia": "869684854",
+   "camadas": "Mapa estadual",
+   "ato_num": "",
+   "ato_tipo": "",
+   "ato_sit": "",
+   "ato_mun": "",
+   "ato_km": null,
+   "chip_2022": "C-05_2022.png",
+   "chip_2025": "C-05_2025.png",
+   "data_2022": "2022-09-01",
+   "data_2025": "2025-07-27",
+   "serie": [
+    {
+     "data": "2025-07-17",
+     "pivo": 0.313,
+     "entorno": 0.443
+    },
+    {
+     "data": "2025-07-22",
+     "pivo": 0.25,
+     "entorno": 0.428
+    },
+    {
+     "data": "2025-07-24",
+     "pivo": 0.242,
+     "entorno": 0.422
+    },
+    {
+     "data": "2025-07-27",
+     "pivo": 0.244,
+     "entorno": 0.416
+    },
+    {
+     "data": "2025-08-01",
+     "pivo": 0.24,
+     "entorno": 0.407
+    },
+    {
+     "data": "2025-08-03",
+     "pivo": 0.253,
+     "entorno": 0.419
+    },
+    {
+     "data": "2025-08-06",
+     "pivo": 0.24,
+     "entorno": 0.395
+    },
+    {
+     "data": "2025-08-11",
+     "pivo": 0.245,
+     "entorno": 0.399
+    },
+    {
+     "data": "2025-08-13",
+     "pivo": 0.234,
+     "entorno": 0.385
+    },
+    {
+     "data": "2025-08-16",
+     "pivo": 0.235,
+     "entorno": 0.381
+    },
+    {
+     "data": "2025-08-21",
+     "pivo": 0.215,
+     "entorno": 0.359
+    },
+    {
+     "data": "2025-08-26",
+     "pivo": 0.191,
+     "entorno": 0.363
+    },
+    {
+     "data": "2025-08-31",
+     "pivo": 0.179,
+     "entorno": 0.352
+    },
+    {
+     "data": "2025-09-02",
+     "pivo": 0.174,
+     "entorno": 0.35
+    },
+    {
+     "data": "2025-09-05",
+     "pivo": 0.18,
+     "entorno": 0.352
+    },
+    {
+     "data": "2025-09-10",
+     "pivo": 0.177,
+     "entorno": 0.375
+    },
+    {
+     "data": "2025-09-12",
+     "pivo": 0.178,
+     "entorno": 0.344
+    },
+    {
+     "data": "2025-09-15",
+     "pivo": 0.17,
+     "entorno": 0.343
+    },
+    {
+     "data": "2025-09-30",
+     "pivo": 0.163,
+     "entorno": 0.362
+    },
+    {
+     "data": "2025-10-02",
+     "pivo": 0.163,
+     "entorno": 0.363
+    },
+    {
+     "data": "2025-10-05",
+     "pivo": 0.152,
+     "entorno": 0.367
+    },
+    {
+     "data": "2025-10-15",
+     "pivo": 0.184,
+     "entorno": 0.375
+    },
+    {
+     "data": "2025-10-20",
+     "pivo": 0.143,
+     "entorno": 0.36
+    },
+    {
+     "data": "2025-10-22",
+     "pivo": 0.3,
+     "entorno": 0.439
+    },
+    {
+     "data": "2025-10-25",
+     "pivo": 0.344,
+     "entorno": 0.441
+    }
+   ],
+   "outorgas_proximas": [
+    {
+     "km": 2.93,
+     "ato": "2105",
+     "captacao": "Barramento",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 2.93,
+     "ato": "2107",
+     "captacao": "Captação superficial em barragem",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 4.17,
+     "ato": "13272017",
+     "captacao": "Captação superficial",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    }
+   ]
+  },
+  {
+   "id": "C-06",
+   "tipo": "R",
+   "lon": -47.913102,
+   "lat": -17.357556,
+   "area_ha": 443.3,
+   "municipio": "Ipameri",
+   "subbacia": "86992697",
+   "camadas": "Mapa estadual",
+   "ato_num": "",
+   "ato_tipo": "",
+   "ato_sit": "",
+   "ato_mun": "",
+   "ato_km": null,
+   "chip_2022": "C-06_2022.png",
+   "chip_2025": "C-06_2025.png",
+   "data_2022": "2022-08-27",
+   "data_2025": "2025-08-26",
+   "serie": [
+    {
+     "data": "2025-04-03",
+     "pivo": 0.735,
+     "entorno": 0.435
+    },
+    {
+     "data": "2025-04-08",
+     "pivo": 0.893,
+     "entorno": 0.446
+    },
+    {
+     "data": "2025-04-25",
+     "pivo": 0.885,
+     "entorno": 0.616
+    },
+    {
+     "data": "2025-05-03",
+     "pivo": 0.902,
+     "entorno": 0.612
+    },
+    {
+     "data": "2025-05-05",
+     "pivo": 0.898,
+     "entorno": 0.616
+    },
+    {
+     "data": "2025-05-08",
+     "pivo": 0.892,
+     "entorno": 0.612
+    },
+    {
+     "data": "2025-05-23",
+     "pivo": 0.876,
+     "entorno": 0.589
+    },
+    {
+     "data": "2025-05-25",
+     "pivo": 0.869,
+     "entorno": 0.579
+    },
+    {
+     "data": "2025-06-07",
+     "pivo": 0.85,
+     "entorno": 0.541
+    },
+    {
+     "data": "2025-06-12",
+     "pivo": 0.816,
+     "entorno": 0.536
+    },
+    {
+     "data": "2025-06-14",
+     "pivo": 0.803,
+     "entorno": 0.53
+    },
+    {
+     "data": "2025-06-17",
+     "pivo": 0.804,
+     "entorno": 0.509
+    },
+    {
+     "data": "2025-06-22",
+     "pivo": 0.738,
+     "entorno": 0.465
+    },
+    {
+     "data": "2025-06-27",
+     "pivo": 0.675,
+     "entorno": 0.385
+    },
+    {
+     "data": "2025-07-02",
+     "pivo": 0.566,
+     "entorno": 0.367
+    },
+    {
+     "data": "2025-07-04",
+     "pivo": 0.524,
+     "entorno": 0.367
+    },
+    {
+     "data": "2025-07-07",
+     "pivo": 0.481,
+     "entorno": 0.36
+    },
+    {
+     "data": "2025-07-17",
+     "pivo": 0.328,
+     "entorno": 0.327
+    },
+    {
+     "data": "2025-07-22",
+     "pivo": 0.297,
+     "entorno": 0.305
+    },
+    {
+     "data": "2025-07-24",
+     "pivo": 0.292,
+     "entorno": 0.293
+    },
+    {
+     "data": "2025-07-27",
+     "pivo": 0.281,
+     "entorno": 0.287
+    },
+    {
+     "data": "2025-08-01",
+     "pivo": 0.251,
+     "entorno": 0.282
+    },
+    {
+     "data": "2025-08-06",
+     "pivo": 0.214,
+     "entorno": 0.267
+    },
+    {
+     "data": "2025-08-11",
+     "pivo": 0.222,
+     "entorno": 0.283
+    },
+    {
+     "data": "2025-08-13",
+     "pivo": 0.209,
+     "entorno": 0.267
+    },
+    {
+     "data": "2025-08-16",
+     "pivo": 0.207,
+     "entorno": 0.266
+    },
+    {
+     "data": "2025-08-21",
+     "pivo": 0.192,
+     "entorno": 0.257
+    },
+    {
+     "data": "2025-08-26",
+     "pivo": 0.186,
+     "entorno": 0.26
+    },
+    {
+     "data": "2025-09-10",
+     "pivo": 0.184,
+     "entorno": 0.249
+    },
+    {
+     "data": "2025-09-12",
+     "pivo": 0.175,
+     "entorno": 0.279
+    },
+    {
+     "data": "2025-09-15",
+     "pivo": 0.17,
+     "entorno": 0.239
+    },
+    {
+     "data": "2025-09-30",
+     "pivo": 0.137,
+     "entorno": 0.243
+    },
+    {
+     "data": "2025-10-10",
+     "pivo": 0.138,
+     "entorno": 0.193
+    },
+    {
+     "data": "2025-10-15",
+     "pivo": 0.139,
+     "entorno": 0.245
+    },
+    {
+     "data": "2025-10-22",
+     "pivo": 0.152,
+     "entorno": 0.314
+    }
+   ],
+   "outorgas_proximas": [
+    {
+     "km": 3.86,
+     "ato": "1047",
+     "captacao": "Captação superficial em barragem",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 3.87,
+     "ato": "1192",
+     "captacao": "Barramento",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 4.27,
+     "ato": "14682014",
+     "captacao": "Barramento",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    }
+   ]
+  },
+  {
+   "id": "C-07",
+   "tipo": "R",
+   "lon": -47.797505,
+   "lat": -14.88461,
+   "area_ha": 203.0,
+   "municipio": "Água Fria de Goiás",
+   "subbacia": "6686969",
+   "camadas": "Mapa estadual",
+   "ato_num": "",
+   "ato_tipo": "",
+   "ato_sit": "",
+   "ato_mun": "",
+   "ato_km": null,
+   "chip_2022": "C-07_2022.png",
+   "chip_2025": "C-07_2025.png",
+   "data_2022": "2022-07-31",
+   "data_2025": "2025-07-17",
+   "serie": [
+    {
+     "data": "2025-07-05",
+     "pivo": 0.703,
+     "entorno": 0.393
+    },
+    {
+     "data": "2025-07-07",
+     "pivo": 0.742,
+     "entorno": 0.394
+    },
+    {
+     "data": "2025-07-10",
+     "pivo": 0.728,
+     "entorno": 0.375
+    },
+    {
+     "data": "2025-07-15",
+     "pivo": 0.701,
+     "entorno": 0.369
+    },
+    {
+     "data": "2025-07-17",
+     "pivo": 0.669,
+     "entorno": 0.362
+    },
+    {
+     "data": "2025-07-20",
+     "pivo": 0.614,
+     "entorno": 0.354
+    },
+    {
+     "data": "2025-07-25",
+     "pivo": 0.498,
+     "entorno": 0.341
+    },
+    {
+     "data": "2025-07-27",
+     "pivo": 0.45,
+     "entorno": 0.336
+    },
+    {
+     "data": "2025-07-30",
+     "pivo": 0.36,
+     "entorno": 0.332
+    },
+    {
+     "data": "2025-08-04",
+     "pivo": 0.248,
+     "entorno": 0.316
+    },
+    {
+     "data": "2025-08-06",
+     "pivo": 0.227,
+     "entorno": 0.312
+    },
+    {
+     "data": "2025-08-14",
+     "pivo": 0.16,
+     "entorno": 0.288
+    },
+    {
+     "data": "2025-08-16",
+     "pivo": 0.177,
+     "entorno": 0.3
+    },
+    {
+     "data": "2025-08-19",
+     "pivo": 0.165,
+     "entorno": 0.301
+    },
+    {
+     "data": "2025-08-24",
+     "pivo": 0.152,
+     "entorno": 0.293
+    },
+    {
+     "data": "2025-08-26",
+     "pivo": 0.15,
+     "entorno": 0.295
+    },
+    {
+     "data": "2025-08-29",
+     "pivo": 0.152,
+     "entorno": 0.238
+    },
+    {
+     "data": "2025-09-03",
+     "pivo": 0.13,
+     "entorno": 0.287
+    },
+    {
+     "data": "2025-09-05",
+     "pivo": 0.124,
+     "entorno": 0.281
+    },
+    {
+     "data": "2025-09-08",
+     "pivo": 0.131,
+     "entorno": 0.279
+    },
+    {
+     "data": "2025-09-13",
+     "pivo": 0.141,
+     "entorno": 0.255
+    },
+    {
+     "data": "2025-09-15",
+     "pivo": 0.124,
+     "entorno": 0.162
+    },
+    {
+     "data": "2025-09-28",
+     "pivo": 0.154,
+     "entorno": 0.283
+    },
+    {
+     "data": "2025-10-03",
+     "pivo": 0.154,
+     "entorno": 0.269
+    },
+    {
+     "data": "2025-10-08",
+     "pivo": 0.145,
+     "entorno": 0.262
+    },
+    {
+     "data": "2025-10-15",
+     "pivo": 0.107,
+     "entorno": 0.241
+    },
+    {
+     "data": "2025-10-18",
+     "pivo": 0.142,
+     "entorno": 0.307
+    },
+    {
+     "data": "2025-10-23",
+     "pivo": 0.175,
+     "entorno": 0.284
+    },
+    {
+     "data": "2025-10-25",
+     "pivo": 0.173,
+     "entorno": 0.274
+    },
+    {
+     "data": "2025-10-28",
+     "pivo": 0.197,
+     "entorno": 0.273
+    }
+   ],
+   "outorgas_proximas": [
+    {
+     "km": 2.75,
+     "ato": "0004858",
+     "captacao": "Captação superficial em barragem",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": 2.0
+    },
+    {
+     "km": 2.75,
+     "ato": "0004857",
+     "captacao": "Captação superficial em barragem",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": 2.0
+    },
+    {
+     "km": 3.07,
+     "ato": "0004859",
+     "captacao": "Captação superficial em barragem",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": 2.0
+    }
+   ]
+  },
+  {
+   "id": "C-08",
+   "tipo": "R",
+   "lon": -50.995851,
+   "lat": -16.966455,
+   "area_ha": 203.6,
+   "municipio": "Paraúna",
+   "subbacia": "86944866",
+   "camadas": "Mapa estadual",
+   "ato_num": "",
+   "ato_tipo": "",
+   "ato_sit": "",
+   "ato_mun": "",
+   "ato_km": null,
+   "chip_2022": "C-08_2022.png",
+   "chip_2025": "C-08_2025.png",
+   "data_2022": "2022-08-13",
+   "data_2025": "2025-09-28",
+   "serie": [
+    {
+     "data": "2025-05-19",
+     "pivo": 0.518,
+     "entorno": 0.82
+    },
+    {
+     "data": "2025-05-24",
+     "pivo": 0.409,
+     "entorno": 0.809
+    },
+    {
+     "data": "2025-05-31",
+     "pivo": 0.347,
+     "entorno": 0.763
+    },
+    {
+     "data": "2025-06-03",
+     "pivo": 0.31,
+     "entorno": 0.79
+    },
+    {
+     "data": "2025-06-08",
+     "pivo": 0.344,
+     "entorno": 0.762
+    },
+    {
+     "data": "2025-06-13",
+     "pivo": 0.377,
+     "entorno": 0.745
+    },
+    {
+     "data": "2025-06-18",
+     "pivo": 0.388,
+     "entorno": 0.701
+    },
+    {
+     "data": "2025-06-20",
+     "pivo": 0.371,
+     "entorno": 0.665
+    },
+    {
+     "data": "2025-06-23",
+     "pivo": 0.345,
+     "entorno": 0.595
+    },
+    {
+     "data": "2025-06-28",
+     "pivo": 0.273,
+     "entorno": 0.543
+    },
+    {
+     "data": "2025-06-30",
+     "pivo": 0.249,
+     "entorno": 0.498
+    },
+    {
+     "data": "2025-07-03",
+     "pivo": 0.236,
+     "entorno": 0.496
+    },
+    {
+     "data": "2025-07-08",
+     "pivo": 0.236,
+     "entorno": 0.461
+    },
+    {
+     "data": "2025-07-10",
+     "pivo": 0.232,
+     "entorno": 0.438
+    },
+    {
+     "data": "2025-07-20",
+     "pivo": 0.227,
+     "entorno": 0.319
+    },
+    {
+     "data": "2025-07-23",
+     "pivo": 0.223,
+     "entorno": 0.362
+    },
+    {
+     "data": "2025-07-30",
+     "pivo": 0.24,
+     "entorno": 0.374
+    },
+    {
+     "data": "2025-08-02",
+     "pivo": 0.207,
+     "entorno": 0.315
+    },
+    {
+     "data": "2025-08-07",
+     "pivo": 0.231,
+     "entorno": 0.349
+    },
+    {
+     "data": "2025-08-09",
+     "pivo": 0.222,
+     "entorno": 0.341
+    },
+    {
+     "data": "2025-08-12",
+     "pivo": 0.243,
+     "entorno": 0.358
+    },
+    {
+     "data": "2025-08-17",
+     "pivo": 0.214,
+     "entorno": 0.321
+    },
+    {
+     "data": "2025-08-19",
+     "pivo": 0.218,
+     "entorno": 0.325
+    },
+    {
+     "data": "2025-08-22",
+     "pivo": 0.225,
+     "entorno": 0.335
+    },
+    {
+     "data": "2025-08-27",
+     "pivo": 0.213,
+     "entorno": 0.324
+    },
+    {
+     "data": "2025-08-29",
+     "pivo": 0.202,
+     "entorno": 0.246
+    },
+    {
+     "data": "2025-09-01",
+     "pivo": 0.216,
+     "entorno": 0.321
+    },
+    {
+     "data": "2025-09-06",
+     "pivo": 0.222,
+     "entorno": 0.332
+    },
+    {
+     "data": "2025-09-18",
+     "pivo": 0.196,
+     "entorno": 0.284
+    },
+    {
+     "data": "2025-09-21",
+     "pivo": 0.184,
+     "entorno": 0.296
+    },
+    {
+     "data": "2025-09-26",
+     "pivo": 0.19,
+     "entorno": 0.307
+    },
+    {
+     "data": "2025-09-28",
+     "pivo": 0.188,
+     "entorno": 0.308
+    },
+    {
+     "data": "2025-10-06",
+     "pivo": 0.184,
+     "entorno": 0.307
+    },
+    {
+     "data": "2025-10-21",
+     "pivo": 0.189,
+     "entorno": 0.306
+    },
+    {
+     "data": "2025-10-26",
+     "pivo": 0.211,
+     "entorno": 0.296
+    }
+   ],
+   "outorgas_proximas": [
+    {
+     "km": 1.45,
+     "ato": "1140",
+     "captacao": "Captação superficial em barragem",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 1.45,
+     "ato": "1140",
+     "captacao": "Captação superficial em barragem",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 4.23,
+     "ato": "332021",
+     "captacao": "Captação superficial",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    }
+   ]
+  },
+  {
+   "id": "C-09",
+   "tipo": "R",
+   "lon": -49.254149,
+   "lat": -17.914136,
+   "area_ha": 137.1,
+   "municipio": "Morrinhos",
+   "subbacia": "86958997",
+   "camadas": "Mapa estadual",
+   "ato_num": "",
+   "ato_tipo": "",
+   "ato_sit": "",
+   "ato_mun": "",
+   "ato_km": null,
+   "chip_2022": "C-09_2022.png",
+   "chip_2025": "C-09_2025.png",
+   "data_2022": "2022-09-04",
+   "data_2025": "2025-07-25",
+   "serie": [
+    {
+     "data": "2025-04-01",
+     "pivo": 0.657,
+     "entorno": 0.626
+    },
+    {
+     "data": "2025-04-08",
+     "pivo": 0.688,
+     "entorno": 0.639
+    },
+    {
+     "data": "2025-04-11",
+     "pivo": 0.633,
+     "entorno": 0.629
+    },
+    {
+     "data": "2025-05-06",
+     "pivo": 0.785,
+     "entorno": 0.713
+    },
+    {
+     "data": "2025-05-11",
+     "pivo": 0.799,
+     "entorno": 0.718
+    },
+    {
+     "data": "2025-05-16",
+     "pivo": 0.802,
+     "entorno": 0.723
+    },
+    {
+     "data": "2025-05-18",
+     "pivo": 0.8,
+     "entorno": 0.719
+    },
+    {
+     "data": "2025-05-21",
+     "pivo": 0.757,
+     "entorno": 0.683
+    },
+    {
+     "data": "2025-05-26",
+     "pivo": 0.749,
+     "entorno": 0.7
+    },
+    {
+     "data": "2025-05-31",
+     "pivo": 0.661,
+     "entorno": 0.594
+    },
+    {
+     "data": "2025-06-07",
+     "pivo": 0.776,
+     "entorno": 0.699
+    },
+    {
+     "data": "2025-06-20",
+     "pivo": 0.762,
+     "entorno": 0.687
+    },
+    {
+     "data": "2025-06-25",
+     "pivo": 0.774,
+     "entorno": 0.7
+    },
+    {
+     "data": "2025-06-27",
+     "pivo": 0.579,
+     "entorno": 0.58
+    },
+    {
+     "data": "2025-06-30",
+     "pivo": 0.761,
+     "entorno": 0.69
+    },
+    {
+     "data": "2025-07-05",
+     "pivo": 0.754,
+     "entorno": 0.684
+    },
+    {
+     "data": "2025-07-10",
+     "pivo": 0.519,
+     "entorno": 0.647
+    },
+    {
+     "data": "2025-07-15",
+     "pivo": 0.407,
+     "entorno": 0.605
+    },
+    {
+     "data": "2025-07-17",
+     "pivo": 0.383,
+     "entorno": 0.557
+    },
+    {
+     "data": "2025-07-25",
+     "pivo": 0.354,
+     "entorno": 0.522
+    },
+    {
+     "data": "2025-07-30",
+     "pivo": 0.385,
+     "entorno": 0.598
+    },
+    {
+     "data": "2025-08-06",
+     "pivo": 0.353,
+     "entorno": 0.513
+    },
+    {
+     "data": "2025-08-09",
+     "pivo": 0.354,
+     "entorno": 0.507
+    },
+    {
+     "data": "2025-08-14",
+     "pivo": 0.347,
+     "entorno": 0.48
+    },
+    {
+     "data": "2025-08-19",
+     "pivo": 0.341,
+     "entorno": 0.455
+    },
+    {
+     "data": "2025-08-24",
+     "pivo": 0.328,
+     "entorno": 0.433
+    },
+    {
+     "data": "2025-08-26",
+     "pivo": 0.325,
+     "entorno": 0.423
+    },
+    {
+     "data": "2025-09-03",
+     "pivo": 0.32,
+     "entorno": 0.409
+    },
+    {
+     "data": "2025-09-08",
+     "pivo": 0.32,
+     "entorno": 0.392
+    },
+    {
+     "data": "2025-09-15",
+     "pivo": 0.307,
+     "entorno": 0.364
+    },
+    {
+     "data": "2025-09-18",
+     "pivo": 0.298,
+     "entorno": 0.346
+    },
+    {
+     "data": "2025-09-28",
+     "pivo": 0.309,
+     "entorno": 0.349
+    },
+    {
+     "data": "2025-10-15",
+     "pivo": 0.324,
+     "entorno": 0.337
+    },
+    {
+     "data": "2025-10-23",
+     "pivo": 0.366,
+     "entorno": 0.364
+    }
+   ],
+   "outorgas_proximas": [
+    {
+     "km": 1.77,
+     "ato": "0004413",
+     "captacao": "Barramento",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 1.86,
+     "ato": "0004410",
+     "captacao": "Captação superficial",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": 4.23
+    },
+    {
+     "km": 2.55,
+     "ato": "0004412",
+     "captacao": "Barramento",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    }
+   ]
+  },
+  {
+   "id": "C-10",
+   "tipo": "R",
+   "lon": -49.557033,
+   "lat": -17.9859,
+   "area_ha": 151.7,
+   "municipio": "Goiatuba",
+   "subbacia": "869523188",
+   "camadas": "Mapa estadual",
+   "ato_num": "",
+   "ato_tipo": "",
+   "ato_sit": "",
+   "ato_mun": "",
+   "ato_km": null,
+   "chip_2022": "C-10_2022.png",
+   "chip_2025": "C-10_2025.png",
+   "data_2022": "2022-09-04",
+   "data_2025": "2025-07-25",
+   "serie": [
+    {
+     "data": "2025-04-01",
+     "pivo": 0.778,
+     "entorno": 0.715
+    },
+    {
+     "data": "2025-04-08",
+     "pivo": 0.785,
+     "entorno": 0.729
+    },
+    {
+     "data": "2025-04-11",
+     "pivo": 0.786,
+     "entorno": 0.729
+    },
+    {
+     "data": "2025-04-21",
+     "pivo": 0.798,
+     "entorno": 0.751
+    },
+    {
+     "data": "2025-04-26",
+     "pivo": 0.773,
+     "entorno": 0.746
+    },
+    {
+     "data": "2025-05-01",
+     "pivo": 0.792,
+     "entorno": 0.75
+    },
+    {
+     "data": "2025-05-06",
+     "pivo": 0.797,
+     "entorno": 0.728
+    },
+    {
+     "data": "2025-05-11",
+     "pivo": 0.786,
+     "entorno": 0.704
+    },
+    {
+     "data": "2025-05-16",
+     "pivo": 0.792,
+     "entorno": 0.712
+    },
+    {
+     "data": "2025-05-18",
+     "pivo": 0.787,
+     "entorno": 0.71
+    },
+    {
+     "data": "2025-05-21",
+     "pivo": 0.754,
+     "entorno": 0.68
+    },
+    {
+     "data": "2025-05-26",
+     "pivo": 0.753,
+     "entorno": 0.681
+    },
+    {
+     "data": "2025-06-07",
+     "pivo": 0.74,
+     "entorno": 0.602
+    },
+    {
+     "data": "2025-06-20",
+     "pivo": 0.206,
+     "entorno": 0.56
+    },
+    {
+     "data": "2025-06-25",
+     "pivo": 0.186,
+     "entorno": 0.543
+    },
+    {
+     "data": "2025-06-27",
+     "pivo": 0.181,
+     "entorno": 0.505
+    },
+    {
+     "data": "2025-06-30",
+     "pivo": 0.187,
+     "entorno": 0.508
+    },
+    {
+     "data": "2025-07-05",
+     "pivo": 0.183,
+     "entorno": 0.493
+    },
+    {
+     "data": "2025-07-10",
+     "pivo": 0.19,
+     "entorno": 0.484
+    },
+    {
+     "data": "2025-07-15",
+     "pivo": 0.184,
+     "entorno": 0.48
+    },
+    {
+     "data": "2025-07-17",
+     "pivo": 0.191,
+     "entorno": 0.479
+    },
+    {
+     "data": "2025-07-25",
+     "pivo": 0.192,
+     "entorno": 0.453
+    },
+    {
+     "data": "2025-07-30",
+     "pivo": 0.223,
+     "entorno": 0.476
+    },
+    {
+     "data": "2025-08-06",
+     "pivo": 0.211,
+     "entorno": 0.433
+    },
+    {
+     "data": "2025-08-09",
+     "pivo": 0.217,
+     "entorno": 0.377
+    },
+    {
+     "data": "2025-08-14",
+     "pivo": 0.221,
+     "entorno": 0.333
+    },
+    {
+     "data": "2025-08-19",
+     "pivo": 0.238,
+     "entorno": 0.326
+    },
+    {
+     "data": "2025-08-24",
+     "pivo": 0.239,
+     "entorno": 0.315
+    },
+    {
+     "data": "2025-08-26",
+     "pivo": 0.244,
+     "entorno": 0.31
+    },
+    {
+     "data": "2025-09-03",
+     "pivo": 0.252,
+     "entorno": 0.307
+    },
+    {
+     "data": "2025-09-08",
+     "pivo": 0.269,
+     "entorno": 0.306
+    },
+    {
+     "data": "2025-09-15",
+     "pivo": 0.275,
+     "entorno": 0.291
+    },
+    {
+     "data": "2025-09-18",
+     "pivo": 0.261,
+     "entorno": 0.285
+    },
+    {
+     "data": "2025-10-03",
+     "pivo": 0.311,
+     "entorno": 0.266
+    },
+    {
+     "data": "2025-10-15",
+     "pivo": 0.341,
+     "entorno": 0.275
+    },
+    {
+     "data": "2025-10-23",
+     "pivo": 0.427,
+     "entorno": 0.315
+    }
+   ],
+   "outorgas_proximas": []
+  },
+  {
+   "id": "C-11",
+   "tipo": "R",
+   "lon": -51.221278,
+   "lat": -15.373116,
+   "area_ha": 147.8,
+   "municipio": "Britânia",
+   "subbacia": "69542343",
+   "camadas": "Mapa estadual",
+   "ato_num": "",
+   "ato_tipo": "",
+   "ato_sit": "",
+   "ato_mun": "",
+   "ato_km": null,
+   "chip_2022": "C-11_2022.png",
+   "chip_2025": "C-11_2025.png",
+   "data_2022": "2022-09-07",
+   "data_2025": "2025-08-27",
+   "serie": [
+    {
+     "data": "2025-05-19",
+     "pivo": 0.563,
+     "entorno": 0.555
+    },
+    {
+     "data": "2025-05-24",
+     "pivo": 0.749,
+     "entorno": 0.557
+    },
+    {
+     "data": "2025-05-31",
+     "pivo": 0.899,
+     "entorno": 0.569
+    },
+    {
+     "data": "2025-06-03",
+     "pivo": 0.925,
+     "entorno": 0.561
+    },
+    {
+     "data": "2025-06-08",
+     "pivo": 0.927,
+     "entorno": 0.55
+    },
+    {
+     "data": "2025-06-10",
+     "pivo": 0.928,
+     "entorno": 0.535
+    },
+    {
+     "data": "2025-06-13",
+     "pivo": 0.932,
+     "entorno": 0.531
+    },
+    {
+     "data": "2025-06-18",
+     "pivo": 0.943,
+     "entorno": 0.513
+    },
+    {
+     "data": "2025-06-20",
+     "pivo": 0.927,
+     "entorno": 0.501
+    },
+    {
+     "data": "2025-06-23",
+     "pivo": 0.945,
+     "entorno": 0.485
+    },
+    {
+     "data": "2025-06-28",
+     "pivo": 0.939,
+     "entorno": 0.489
+    },
+    {
+     "data": "2025-06-30",
+     "pivo": 0.931,
+     "entorno": 0.476
+    },
+    {
+     "data": "2025-07-03",
+     "pivo": 0.924,
+     "entorno": 0.469
+    },
+    {
+     "data": "2025-07-08",
+     "pivo": 0.898,
+     "entorno": 0.446
+    },
+    {
+     "data": "2025-07-10",
+     "pivo": 0.866,
+     "entorno": 0.428
+    },
+    {
+     "data": "2025-07-20",
+     "pivo": 0.5,
+     "entorno": 0.348
+    },
+    {
+     "data": "2025-07-23",
+     "pivo": 0.254,
+     "entorno": 0.307
+    },
+    {
+     "data": "2025-07-30",
+     "pivo": 0.188,
+     "entorno": 0.273
+    },
+    {
+     "data": "2025-08-02",
+     "pivo": 0.169,
+     "entorno": 0.254
+    },
+    {
+     "data": "2025-08-07",
+     "pivo": 0.168,
+     "entorno": 0.259
+    },
+    {
+     "data": "2025-08-09",
+     "pivo": 0.163,
+     "entorno": 0.248
+    },
+    {
+     "data": "2025-08-12",
+     "pivo": 0.182,
+     "entorno": 0.27
+    },
+    {
+     "data": "2025-08-17",
+     "pivo": 0.154,
+     "entorno": 0.232
+    },
+    {
+     "data": "2025-08-19",
+     "pivo": 0.162,
+     "entorno": 0.241
+    },
+    {
+     "data": "2025-08-22",
+     "pivo": 0.169,
+     "entorno": 0.245
+    },
+    {
+     "data": "2025-08-27",
+     "pivo": 0.144,
+     "entorno": 0.221
+    },
+    {
+     "data": "2025-08-29",
+     "pivo": 0.148,
+     "entorno": 0.222
+    },
+    {
+     "data": "2025-09-01",
+     "pivo": 0.146,
+     "entorno": 0.218
+    },
+    {
+     "data": "2025-09-06",
+     "pivo": 0.147,
+     "entorno": 0.22
+    },
+    {
+     "data": "2025-09-08",
+     "pivo": 0.151,
+     "entorno": 0.218
+    },
+    {
+     "data": "2025-09-11",
+     "pivo": 0.153,
+     "entorno": 0.209
+    },
+    {
+     "data": "2025-09-26",
+     "pivo": 0.154,
+     "entorno": 0.227
+    },
+    {
+     "data": "2025-09-28",
+     "pivo": 0.161,
+     "entorno": 0.237
+    },
+    {
+     "data": "2025-10-06",
+     "pivo": 0.135,
+     "entorno": 0.239
+    },
+    {
+     "data": "2025-10-08",
+     "pivo": 0.136,
+     "entorno": 0.237
+    },
+    {
+     "data": "2025-10-11",
+     "pivo": 0.141,
+     "entorno": 0.251
+    },
+    {
+     "data": "2025-10-16",
+     "pivo": 0.132,
+     "entorno": 0.283
+    },
+    {
+     "data": "2025-10-26",
+     "pivo": 0.155,
+     "entorno": 0.289
+    },
+    {
+     "data": "2025-10-28",
+     "pivo": 0.162,
+     "entorno": 0.288
+    }
+   ],
+   "outorgas_proximas": [
+    {
+     "km": 3.08,
+     "ato": "1332",
+     "captacao": "Captação superficial em barragem",
+     "situacao": "Não instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 3.08,
+     "ato": "1332",
+     "captacao": "Captação superficial em barragem",
+     "situacao": "Não instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 3.08,
+     "ato": "1332",
+     "captacao": "Captação superficial em barragem",
+     "situacao": "Não instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    }
+   ]
+  },
+  {
+   "id": "C-12",
+   "tipo": "R",
+   "lon": -47.715507,
+   "lat": -14.616624,
+   "area_ha": 241.0,
+   "municipio": "São João d'Aliança",
+   "subbacia": "66764441",
+   "camadas": "Mapa estadual",
+   "ato_num": "",
+   "ato_tipo": "",
+   "ato_sit": "",
+   "ato_mun": "",
+   "ato_km": null,
+   "chip_2022": "C-12_2022.png",
+   "chip_2025": "C-12_2025.png",
+   "data_2022": "2022-07-31",
+   "data_2025": "2025-09-13",
+   "serie": [
+    {
+     "data": "2025-08-06",
+     "pivo": 0.515,
+     "entorno": 0.424
+    },
+    {
+     "data": "2025-08-09",
+     "pivo": 0.482,
+     "entorno": 0.378
+    },
+    {
+     "data": "2025-08-14",
+     "pivo": 0.533,
+     "entorno": 0.415
+    },
+    {
+     "data": "2025-08-16",
+     "pivo": 0.535,
+     "entorno": 0.415
+    },
+    {
+     "data": "2025-08-19",
+     "pivo": 0.502,
+     "entorno": 0.416
+    },
+    {
+     "data": "2025-08-24",
+     "pivo": 0.382,
+     "entorno": 0.407
+    },
+    {
+     "data": "2025-08-26",
+     "pivo": 0.349,
+     "entorno": 0.408
+    },
+    {
+     "data": "2025-08-29",
+     "pivo": 0.298,
+     "entorno": 0.392
+    },
+    {
+     "data": "2025-09-03",
+     "pivo": 0.26,
+     "entorno": 0.398
+    },
+    {
+     "data": "2025-09-05",
+     "pivo": 0.252,
+     "entorno": 0.391
+    },
+    {
+     "data": "2025-09-08",
+     "pivo": 0.25,
+     "entorno": 0.386
+    },
+    {
+     "data": "2025-09-13",
+     "pivo": 0.234,
+     "entorno": 0.331
+    },
+    {
+     "data": "2025-09-15",
+     "pivo": 0.223,
+     "entorno": 0.315
+    },
+    {
+     "data": "2025-09-25",
+     "pivo": 0.162,
+     "entorno": 0.232
+    },
+    {
+     "data": "2025-09-28",
+     "pivo": 0.186,
+     "entorno": 0.319
+    },
+    {
+     "data": "2025-10-03",
+     "pivo": 0.19,
+     "entorno": 0.316
+    },
+    {
+     "data": "2025-10-08",
+     "pivo": 0.187,
+     "entorno": 0.309
+    },
+    {
+     "data": "2025-10-18",
+     "pivo": 0.253,
+     "entorno": 0.31
+    },
+    {
+     "data": "2025-10-23",
+     "pivo": 0.328,
+     "entorno": 0.356
+    },
+    {
+     "data": "2025-10-25",
+     "pivo": 0.32,
+     "entorno": 0.352
+    },
+    {
+     "data": "2025-10-28",
+     "pivo": 0.352,
+     "entorno": 0.362
+    }
+   ],
+   "outorgas_proximas": [
+    {
+     "km": 1.18,
+     "ato": "221",
+     "captacao": "Captação superficial em barragem",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 1.38,
+     "ato": "DURH005464",
+     "captacao": "Captação superficial em barragem",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 1.38,
+     "ato": "220",
+     "captacao": "Barramento",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    }
+   ]
+  },
+  {
+   "id": "C-13",
+   "tipo": "R",
+   "lon": -50.472442,
+   "lat": -17.838843,
+   "area_ha": 163.6,
+   "municipio": "Santa Helena de Goiás",
+   "subbacia": "86944222",
+   "camadas": "Mapa estadual",
+   "ato_num": "",
+   "ato_tipo": "",
+   "ato_sit": "",
+   "ato_mun": "",
+   "ato_km": null,
+   "chip_2022": "C-13_2022.png",
+   "chip_2025": "C-13_2025.png",
+   "data_2022": "2022-07-26",
+   "data_2025": "2025-07-30",
+   "serie": [
+    {
+     "data": "2025-04-01",
+     "pivo": 0.687,
+     "entorno": 0.582
+    },
+    {
+     "data": "2025-04-08",
+     "pivo": 0.749,
+     "entorno": 0.65
+    },
+    {
+     "data": "2025-04-11",
+     "pivo": 0.761,
+     "entorno": 0.662
+    },
+    {
+     "data": "2025-04-21",
+     "pivo": 0.77,
+     "entorno": 0.687
+    },
+    {
+     "data": "2025-04-26",
+     "pivo": 0.756,
+     "entorno": 0.689
+    },
+    {
+     "data": "2025-05-01",
+     "pivo": 0.503,
+     "entorno": 0.509
+    },
+    {
+     "data": "2025-05-06",
+     "pivo": 0.777,
+     "entorno": 0.721
+    },
+    {
+     "data": "2025-05-11",
+     "pivo": 0.743,
+     "entorno": 0.686
+    },
+    {
+     "data": "2025-05-16",
+     "pivo": 0.785,
+     "entorno": 0.743
+    },
+    {
+     "data": "2025-05-18",
+     "pivo": 0.777,
+     "entorno": 0.737
+    },
+    {
+     "data": "2025-05-21",
+     "pivo": 0.754,
+     "entorno": 0.713
+    },
+    {
+     "data": "2025-05-26",
+     "pivo": 0.721,
+     "entorno": 0.679
+    },
+    {
+     "data": "2025-05-31",
+     "pivo": 0.729,
+     "entorno": 0.681
+    },
+    {
+     "data": "2025-06-07",
+     "pivo": 0.744,
+     "entorno": 0.617
+    },
+    {
+     "data": "2025-06-20",
+     "pivo": 0.729,
+     "entorno": 0.517
+    },
+    {
+     "data": "2025-06-25",
+     "pivo": 0.755,
+     "entorno": 0.519
+    },
+    {
+     "data": "2025-06-27",
+     "pivo": 0.713,
+     "entorno": 0.487
+    },
+    {
+     "data": "2025-06-30",
+     "pivo": 0.731,
+     "entorno": 0.503
+    },
+    {
+     "data": "2025-07-05",
+     "pivo": 0.728,
+     "entorno": 0.5
+    },
+    {
+     "data": "2025-07-10",
+     "pivo": 0.705,
+     "entorno": 0.488
+    },
+    {
+     "data": "2025-07-17",
+     "pivo": 0.685,
+     "entorno": 0.454
+    },
+    {
+     "data": "2025-07-20",
+     "pivo": 0.691,
+     "entorno": 0.451
+    },
+    {
+     "data": "2025-07-25",
+     "pivo": 0.646,
+     "entorno": 0.431
+    },
+    {
+     "data": "2025-07-30",
+     "pivo": 0.666,
+     "entorno": 0.457
+    },
+    {
+     "data": "2025-08-06",
+     "pivo": 0.6,
+     "entorno": 0.408
+    },
+    {
+     "data": "2025-08-09",
+     "pivo": 0.594,
+     "entorno": 0.407
+    },
+    {
+     "data": "2025-08-14",
+     "pivo": 0.253,
+     "entorno": 0.39
+    },
+    {
+     "data": "2025-08-19",
+     "pivo": 0.197,
+     "entorno": 0.358
+    },
+    {
+     "data": "2025-08-26",
+     "pivo": 0.175,
+     "entorno": 0.33
+    },
+    {
+     "data": "2025-09-08",
+     "pivo": 0.186,
+     "entorno": 0.276
+    },
+    {
+     "data": "2025-09-13",
+     "pivo": 0.165,
+     "entorno": 0.224
+    },
+    {
+     "data": "2025-09-15",
+     "pivo": 0.176,
+     "entorno": 0.235
+    },
+    {
+     "data": "2025-09-18",
+     "pivo": 0.204,
+     "entorno": 0.242
+    },
+    {
+     "data": "2025-09-28",
+     "pivo": 0.242,
+     "entorno": 0.233
+    },
+    {
+     "data": "2025-10-03",
+     "pivo": 0.247,
+     "entorno": 0.22
+    },
+    {
+     "data": "2025-10-15",
+     "pivo": 0.267,
+     "entorno": 0.2
+    },
+    {
+     "data": "2025-10-23",
+     "pivo": 0.242,
+     "entorno": 0.21
+    }
+   ],
+   "outorgas_proximas": [
+    {
+     "km": 3.53,
+     "ato": "0005469",
+     "captacao": "Captação superficial em barragem",
+     "situacao": "Não instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": 0.625
+    },
+    {
+     "km": 3.53,
+     "ato": "0005465",
+     "captacao": "Captação superficial em barragem",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 3.54,
+     "ato": "0005472",
+     "captacao": "Captação superficial em barragem",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    }
+   ]
+  },
+  {
+   "id": "C-14",
+   "tipo": "R",
+   "lon": -50.129162,
+   "lat": -17.433596,
+   "area_ha": 218.7,
+   "municipio": "Acreúna",
+   "subbacia": "8694672",
+   "camadas": "Mapa estadual",
+   "ato_num": "",
+   "ato_tipo": "",
+   "ato_sit": "",
+   "ato_mun": "",
+   "ato_km": null,
+   "chip_2022": "C-14_2022.png",
+   "chip_2025": "C-14_2025.png",
+   "data_2022": "2022-07-26",
+   "data_2025": "2025-07-30",
+   "serie": [
+    {
+     "data": "2025-04-01",
+     "pivo": 0.856,
+     "entorno": 0.622
+    },
+    {
+     "data": "2025-04-08",
+     "pivo": 0.842,
+     "entorno": 0.627
+    },
+    {
+     "data": "2025-04-11",
+     "pivo": 0.855,
+     "entorno": 0.616
+    },
+    {
+     "data": "2025-04-21",
+     "pivo": 0.853,
+     "entorno": 0.641
+    },
+    {
+     "data": "2025-04-26",
+     "pivo": 0.844,
+     "entorno": 0.636
+    },
+    {
+     "data": "2025-05-01",
+     "pivo": 0.835,
+     "entorno": 0.636
+    },
+    {
+     "data": "2025-05-06",
+     "pivo": 0.826,
+     "entorno": 0.614
+    },
+    {
+     "data": "2025-05-11",
+     "pivo": 0.786,
+     "entorno": 0.589
+    },
+    {
+     "data": "2025-05-16",
+     "pivo": 0.728,
+     "entorno": 0.575
+    },
+    {
+     "data": "2025-05-18",
+     "pivo": 0.672,
+     "entorno": 0.562
+    },
+    {
+     "data": "2025-05-21",
+     "pivo": 0.592,
+     "entorno": 0.553
+    },
+    {
+     "data": "2025-05-26",
+     "pivo": 0.453,
+     "entorno": 0.523
+    },
+    {
+     "data": "2025-06-07",
+     "pivo": 0.321,
+     "entorno": 0.463
+    },
+    {
+     "data": "2025-06-17",
+     "pivo": 0.283,
+     "entorno": 0.451
+    },
+    {
+     "data": "2025-06-20",
+     "pivo": 0.274,
+     "entorno": 0.435
+    },
+    {
+     "data": "2025-06-27",
+     "pivo": 0.223,
+     "entorno": 0.354
+    },
+    {
+     "data": "2025-06-30",
+     "pivo": 0.238,
+     "entorno": 0.425
+    },
+    {
+     "data": "2025-07-05",
+     "pivo": 0.212,
+     "entorno": 0.432
+    },
+    {
+     "data": "2025-07-10",
+     "pivo": 0.219,
+     "entorno": 0.422
+    },
+    {
+     "data": "2025-07-15",
+     "pivo": 0.211,
+     "entorno": 0.409
+    },
+    {
+     "data": "2025-07-17",
+     "pivo": 0.214,
+     "entorno": 0.404
+    },
+    {
+     "data": "2025-07-25",
+     "pivo": 0.205,
+     "entorno": 0.382
+    },
+    {
+     "data": "2025-07-30",
+     "pivo": 0.231,
+     "entorno": 0.397
+    },
+    {
+     "data": "2025-08-06",
+     "pivo": 0.206,
+     "entorno": 0.354
+    },
+    {
+     "data": "2025-08-09",
+     "pivo": 0.212,
+     "entorno": 0.352
+    },
+    {
+     "data": "2025-08-14",
+     "pivo": 0.207,
+     "entorno": 0.335
+    },
+    {
+     "data": "2025-08-16",
+     "pivo": 0.203,
+     "entorno": 0.321
+    },
+    {
+     "data": "2025-08-19",
+     "pivo": 0.21,
+     "entorno": 0.322
+    },
+    {
+     "data": "2025-08-24",
+     "pivo": 0.202,
+     "entorno": 0.308
+    },
+    {
+     "data": "2025-08-26",
+     "pivo": 0.196,
+     "entorno": 0.307
+    },
+    {
+     "data": "2025-09-03",
+     "pivo": 0.178,
+     "entorno": 0.296
+    },
+    {
+     "data": "2025-09-05",
+     "pivo": 0.178,
+     "entorno": 0.332
+    },
+    {
+     "data": "2025-09-08",
+     "pivo": 0.191,
+     "entorno": 0.289
+    },
+    {
+     "data": "2025-09-13",
+     "pivo": 0.18,
+     "entorno": 0.272
+    },
+    {
+     "data": "2025-09-15",
+     "pivo": 0.185,
+     "entorno": 0.275
+    },
+    {
+     "data": "2025-09-18",
+     "pivo": 0.178,
+     "entorno": 0.282
+    },
+    {
+     "data": "2025-09-28",
+     "pivo": 0.163,
+     "entorno": 0.302
+    },
+    {
+     "data": "2025-10-03",
+     "pivo": 0.167,
+     "entorno": 0.297
+    },
+    {
+     "data": "2025-10-15",
+     "pivo": 0.194,
+     "entorno": 0.281
+    },
+    {
+     "data": "2025-10-23",
+     "pivo": 0.303,
+     "entorno": 0.294
+    },
+    {
+     "data": "2025-10-25",
+     "pivo": 0.314,
+     "entorno": 0.287
+    }
+   ],
+   "outorgas_proximas": [
+    {
+     "km": 0.93,
+     "ato": "2458",
+     "captacao": "Captação superficial direta",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 3.04,
+     "ato": "2708",
+     "captacao": "Captação superficial direta",
+     "situacao": "Não instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 3.1,
+     "ato": "1761",
+     "captacao": "Captação superficial direta",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    }
+   ]
+  },
+  {
+   "id": "C-15",
+   "tipo": "R",
+   "lon": -47.518371,
+   "lat": -17.62066,
+   "area_ha": 239.7,
+   "municipio": "Catalão",
+   "subbacia": "86999242",
+   "camadas": "Mapa estadual, Bacia Sao Marcos",
+   "ato_num": "",
+   "ato_tipo": "",
+   "ato_sit": "",
+   "ato_mun": "",
+   "ato_km": null,
+   "chip_2022": "C-15_2022.png",
+   "chip_2025": "C-15_2025.png",
+   "data_2022": "2022-08-27",
+   "data_2025": "2025-08-26",
+   "serie": [
+    {
+     "data": "2025-05-03",
+     "pivo": 0.899,
+     "entorno": 0.726
+    },
+    {
+     "data": "2025-05-05",
+     "pivo": 0.902,
+     "entorno": 0.712
+    },
+    {
+     "data": "2025-05-08",
+     "pivo": 0.895,
+     "entorno": 0.716
+    },
+    {
+     "data": "2025-05-18",
+     "pivo": 0.886,
+     "entorno": 0.679
+    },
+    {
+     "data": "2025-05-23",
+     "pivo": 0.882,
+     "entorno": 0.666
+    },
+    {
+     "data": "2025-05-25",
+     "pivo": 0.872,
+     "entorno": 0.666
+    },
+    {
+     "data": "2025-06-02",
+     "pivo": 0.862,
+     "entorno": 0.646
+    },
+    {
+     "data": "2025-06-07",
+     "pivo": 0.849,
+     "entorno": 0.628
+    },
+    {
+     "data": "2025-06-12",
+     "pivo": 0.815,
+     "entorno": 0.572
+    },
+    {
+     "data": "2025-06-14",
+     "pivo": 0.809,
+     "entorno": 0.564
+    },
+    {
+     "data": "2025-06-17",
+     "pivo": 0.761,
+     "entorno": 0.607
+    },
+    {
+     "data": "2025-06-22",
+     "pivo": 0.696,
+     "entorno": 0.498
+    },
+    {
+     "data": "2025-06-27",
+     "pivo": 0.621,
+     "entorno": 0.474
+    },
+    {
+     "data": "2025-07-02",
+     "pivo": 0.513,
+     "entorno": 0.428
+    },
+    {
+     "data": "2025-07-04",
+     "pivo": 0.481,
+     "entorno": 0.396
+    },
+    {
+     "data": "2025-07-07",
+     "pivo": 0.441,
+     "entorno": 0.368
+    },
+    {
+     "data": "2025-07-17",
+     "pivo": 0.299,
+     "entorno": 0.33
+    },
+    {
+     "data": "2025-07-22",
+     "pivo": 0.258,
+     "entorno": 0.314
+    },
+    {
+     "data": "2025-07-24",
+     "pivo": 0.257,
+     "entorno": 0.3
+    },
+    {
+     "data": "2025-07-27",
+     "pivo": 0.249,
+     "entorno": 0.299
+    },
+    {
+     "data": "2025-08-01",
+     "pivo": 0.226,
+     "entorno": 0.286
+    },
+    {
+     "data": "2025-08-06",
+     "pivo": 0.205,
+     "entorno": 0.283
+    },
+    {
+     "data": "2025-08-11",
+     "pivo": 0.196,
+     "entorno": 0.275
+    },
+    {
+     "data": "2025-08-13",
+     "pivo": 0.184,
+     "entorno": 0.256
+    },
+    {
+     "data": "2025-08-16",
+     "pivo": 0.187,
+     "entorno": 0.268
+    },
+    {
+     "data": "2025-08-21",
+     "pivo": 0.165,
+     "entorno": 0.248
+    },
+    {
+     "data": "2025-08-26",
+     "pivo": 0.168,
+     "entorno": 0.26
+    },
+    {
+     "data": "2025-08-31",
+     "pivo": 0.165,
+     "entorno": 0.257
+    },
+    {
+     "data": "2025-09-02",
+     "pivo": 0.168,
+     "entorno": 0.257
+    },
+    {
+     "data": "2025-09-10",
+     "pivo": 0.173,
+     "entorno": 0.291
+    },
+    {
+     "data": "2025-09-15",
+     "pivo": 0.157,
+     "entorno": 0.244
+    },
+    {
+     "data": "2025-09-20",
+     "pivo": 0.133,
+     "entorno": 0.274
+    },
+    {
+     "data": "2025-09-30",
+     "pivo": 0.126,
+     "entorno": 0.237
+    },
+    {
+     "data": "2025-10-05",
+     "pivo": 0.133,
+     "entorno": 0.3
+    },
+    {
+     "data": "2025-10-10",
+     "pivo": 0.119,
+     "entorno": 0.221
+    },
+    {
+     "data": "2025-10-12",
+     "pivo": 0.134,
+     "entorno": 0.242
+    },
+    {
+     "data": "2025-10-15",
+     "pivo": 0.131,
+     "entorno": 0.247
+    },
+    {
+     "data": "2025-10-25",
+     "pivo": 0.146,
+     "entorno": 0.25
+    }
+   ],
+   "outorgas_proximas": [
+    {
+     "km": 3.4,
+     "ato": "8652017",
+     "captacao": "Barramento",
+     "situacao": "Não instalado",
+     "dominio": "Federal",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 3.82,
+     "ato": "8642017",
+     "captacao": "Barramento",
+     "situacao": "Não instalado",
+     "dominio": "Federal",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    }
+   ]
+  },
+  {
+   "id": "C-16",
+   "tipo": "R",
+   "lon": -47.572685,
+   "lat": -14.413416,
+   "area_ha": 213.7,
+   "municipio": "Alto Paraíso de Goiás",
+   "subbacia": "66768129",
+   "camadas": "Mapa estadual",
+   "ato_num": "",
+   "ato_tipo": "",
+   "ato_sit": "",
+   "ato_mun": "",
+   "ato_km": null,
+   "chip_2022": "C-16_2022.png",
+   "chip_2025": "C-16_2025.png",
+   "data_2022": "2022-07-28",
+   "data_2025": "2025-08-06",
+   "serie": [],
+   "outorgas_proximas": [
+    {
+     "km": 3.45,
+     "ato": "2468",
+     "captacao": "Captação superficial em barragem",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 3.46,
+     "ato": "2420",
+     "captacao": "Barramento",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    }
+   ]
+  },
+  {
+   "id": "C-17",
+   "tipo": "R",
+   "lon": -49.811004,
+   "lat": -15.971884,
+   "area_ha": 123.8,
+   "municipio": "Itaberaí",
+   "subbacia": "669876",
+   "camadas": "Mapa estadual",
+   "ato_num": "",
+   "ato_tipo": "",
+   "ato_sit": "",
+   "ato_mun": "",
+   "ato_km": null,
+   "chip_2022": "C-17_2022.png",
+   "chip_2025": "C-17_2025.png",
+   "data_2022": "2022-08-30",
+   "data_2025": "2025-09-03",
+   "serie": [
+    {
+     "data": "2025-04-01",
+     "pivo": 0.858,
+     "entorno": 0.746
+    },
+    {
+     "data": "2025-04-11",
+     "pivo": 0.904,
+     "entorno": 0.768
+    },
+    {
+     "data": "2025-04-18",
+     "pivo": 0.891,
+     "entorno": 0.83
+    },
+    {
+     "data": "2025-04-21",
+     "pivo": 0.884,
+     "entorno": 0.826
+    },
+    {
+     "data": "2025-04-26",
+     "pivo": 0.877,
+     "entorno": 0.818
+    },
+    {
+     "data": "2025-05-01",
+     "pivo": 0.876,
+     "entorno": 0.818
+    },
+    {
+     "data": "2025-05-06",
+     "pivo": 0.88,
+     "entorno": 0.821
+    },
+    {
+     "data": "2025-05-08",
+     "pivo": 0.791,
+     "entorno": 0.732
+    },
+    {
+     "data": "2025-05-11",
+     "pivo": 0.874,
+     "entorno": 0.809
+    },
+    {
+     "data": "2025-05-16",
+     "pivo": 0.873,
+     "entorno": 0.806
+    },
+    {
+     "data": "2025-05-18",
+     "pivo": 0.868,
+     "entorno": 0.795
+    },
+    {
+     "data": "2025-05-26",
+     "pivo": 0.855,
+     "entorno": 0.771
+    },
+    {
+     "data": "2025-05-31",
+     "pivo": 0.83,
+     "entorno": 0.731
+    },
+    {
+     "data": "2025-06-07",
+     "pivo": 0.64,
+     "entorno": 0.728
+    },
+    {
+     "data": "2025-06-15",
+     "pivo": 0.192,
+     "entorno": 0.673
+    },
+    {
+     "data": "2025-06-17",
+     "pivo": 0.202,
+     "entorno": 0.68
+    },
+    {
+     "data": "2025-06-20",
+     "pivo": 0.196,
+     "entorno": 0.634
+    },
+    {
+     "data": "2025-06-25",
+     "pivo": 0.158,
+     "entorno": 0.566
+    },
+    {
+     "data": "2025-06-27",
+     "pivo": 0.16,
+     "entorno": 0.55
+    },
+    {
+     "data": "2025-06-30",
+     "pivo": 0.166,
+     "entorno": 0.531
+    },
+    {
+     "data": "2025-07-05",
+     "pivo": 0.16,
+     "entorno": 0.508
+    },
+    {
+     "data": "2025-07-07",
+     "pivo": 0.153,
+     "entorno": 0.504
+    },
+    {
+     "data": "2025-07-10",
+     "pivo": 0.151,
+     "entorno": 0.478
+    },
+    {
+     "data": "2025-07-15",
+     "pivo": 0.133,
+     "entorno": 0.47
+    },
+    {
+     "data": "2025-07-17",
+     "pivo": 0.131,
+     "entorno": 0.463
+    },
+    {
+     "data": "2025-07-20",
+     "pivo": 0.144,
+     "entorno": 0.452
+    },
+    {
+     "data": "2025-07-25",
+     "pivo": 0.136,
+     "entorno": 0.429
+    },
+    {
+     "data": "2025-07-27",
+     "pivo": 0.178,
+     "entorno": 0.426
+    },
+    {
+     "data": "2025-07-30",
+     "pivo": 0.23,
+     "entorno": 0.431
+    },
+    {
+     "data": "2025-08-06",
+     "pivo": 0.453,
+     "entorno": 0.406
+    },
+    {
+     "data": "2025-08-14",
+     "pivo": 0.61,
+     "entorno": 0.389
+    },
+    {
+     "data": "2025-08-16",
+     "pivo": 0.647,
+     "entorno": 0.382
+    },
+    {
+     "data": "2025-08-19",
+     "pivo": 0.702,
+     "entorno": 0.373
+    },
+    {
+     "data": "2025-08-24",
+     "pivo": 0.776,
+     "entorno": 0.355
+    },
+    {
+     "data": "2025-08-26",
+     "pivo": 0.807,
+     "entorno": 0.358
+    },
+    {
+     "data": "2025-08-29",
+     "pivo": 0.825,
+     "entorno": 0.342
+    },
+    {
+     "data": "2025-09-03",
+     "pivo": 0.817,
+     "entorno": 0.345
+    },
+    {
+     "data": "2025-09-05",
+     "pivo": 0.711,
+     "entorno": 0.354
+    },
+    {
+     "data": "2025-09-08",
+     "pivo": 0.546,
+     "entorno": 0.349
+    },
+    {
+     "data": "2025-09-13",
+     "pivo": 0.511,
+     "entorno": 0.339
+    },
+    {
+     "data": "2025-09-15",
+     "pivo": 0.558,
+     "entorno": 0.344
+    },
+    {
+     "data": "2025-09-23",
+     "pivo": 0.728,
+     "entorno": 0.33
+    },
+    {
+     "data": "2025-09-25",
+     "pivo": 0.76,
+     "entorno": 0.344
+    },
+    {
+     "data": "2025-09-28",
+     "pivo": 0.804,
+     "entorno": 0.362
+    },
+    {
+     "data": "2025-10-03",
+     "pivo": 0.831,
+     "entorno": 0.36
+    },
+    {
+     "data": "2025-10-05",
+     "pivo": 0.83,
+     "entorno": 0.353
+    },
+    {
+     "data": "2025-10-08",
+     "pivo": 0.761,
+     "entorno": 0.345
+    },
+    {
+     "data": "2025-10-15",
+     "pivo": 0.497,
+     "entorno": 0.36
+    },
+    {
+     "data": "2025-10-23",
+     "pivo": 0.471,
+     "entorno": 0.409
+    },
+    {
+     "data": "2025-10-25",
+     "pivo": 0.484,
+     "entorno": 0.414
+    },
+    {
+     "data": "2025-10-28",
+     "pivo": 0.266,
+     "entorno": 0.241
+    }
+   ],
+   "outorgas_proximas": [
+    {
+     "km": 2.64,
+     "ato": "962",
+     "captacao": "Captação superficial direta",
+     "situacao": "Não instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 2.64,
+     "ato": "952",
+     "captacao": "Captação superficial direta",
+     "situacao": "Não instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 3.07,
+     "ato": "9292019",
+     "captacao": "Captação superficial direta",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    }
+   ]
+  },
+  {
+   "id": "C-18",
+   "tipo": "R",
+   "lon": -51.333096,
+   "lat": -17.221772,
+   "area_ha": 137.1,
+   "municipio": "Caiapônia",
+   "subbacia": "696968693",
+   "camadas": "Mapa estadual",
+   "ato_num": "",
+   "ato_tipo": "",
+   "ato_sit": "",
+   "ato_mun": "",
+   "ato_km": null,
+   "chip_2022": "C-18_2022.png",
+   "chip_2025": "C-18_2025.png",
+   "data_2022": "2022-08-13",
+   "data_2025": "2025-09-28",
+   "serie": [
+    {
+     "data": "2025-05-24",
+     "pivo": 0.772,
+     "entorno": 0.802
+    },
+    {
+     "data": "2025-05-31",
+     "pivo": 0.695,
+     "entorno": 0.747
+    },
+    {
+     "data": "2025-06-03",
+     "pivo": 0.666,
+     "entorno": 0.785
+    },
+    {
+     "data": "2025-06-08",
+     "pivo": 0.58,
+     "entorno": 0.757
+    },
+    {
+     "data": "2025-06-13",
+     "pivo": 0.528,
+     "entorno": 0.753
+    },
+    {
+     "data": "2025-06-18",
+     "pivo": 0.469,
+     "entorno": 0.723
+    },
+    {
+     "data": "2025-06-20",
+     "pivo": 0.438,
+     "entorno": 0.692
+    },
+    {
+     "data": "2025-06-28",
+     "pivo": 0.402,
+     "entorno": 0.65
+    },
+    {
+     "data": "2025-06-30",
+     "pivo": 0.394,
+     "entorno": 0.631
+    },
+    {
+     "data": "2025-07-03",
+     "pivo": 0.379,
+     "entorno": 0.603
+    },
+    {
+     "data": "2025-07-08",
+     "pivo": 0.377,
+     "entorno": 0.565
+    },
+    {
+     "data": "2025-07-10",
+     "pivo": 0.375,
+     "entorno": 0.544
+    },
+    {
+     "data": "2025-07-13",
+     "pivo": 0.364,
+     "entorno": 0.523
+    },
+    {
+     "data": "2025-07-23",
+     "pivo": 0.336,
+     "entorno": 0.463
+    },
+    {
+     "data": "2025-07-28",
+     "pivo": 0.316,
+     "entorno": 0.45
+    },
+    {
+     "data": "2025-07-30",
+     "pivo": 0.327,
+     "entorno": 0.468
+    },
+    {
+     "data": "2025-08-02",
+     "pivo": 0.28,
+     "entorno": 0.401
+    },
+    {
+     "data": "2025-08-07",
+     "pivo": 0.303,
+     "entorno": 0.43
+    },
+    {
+     "data": "2025-08-09",
+     "pivo": 0.284,
+     "entorno": 0.405
+    },
+    {
+     "data": "2025-08-12",
+     "pivo": 0.274,
+     "entorno": 0.409
+    },
+    {
+     "data": "2025-08-17",
+     "pivo": 0.212,
+     "entorno": 0.367
+    },
+    {
+     "data": "2025-08-19",
+     "pivo": 0.213,
+     "entorno": 0.363
+    },
+    {
+     "data": "2025-08-22",
+     "pivo": 0.222,
+     "entorno": 0.359
+    },
+    {
+     "data": "2025-08-27",
+     "pivo": 0.215,
+     "entorno": 0.338
+    },
+    {
+     "data": "2025-08-29",
+     "pivo": 0.224,
+     "entorno": 0.346
+    },
+    {
+     "data": "2025-09-01",
+     "pivo": 0.221,
+     "entorno": 0.339
+    },
+    {
+     "data": "2025-09-06",
+     "pivo": 0.22,
+     "entorno": 0.338
+    },
+    {
+     "data": "2025-09-08",
+     "pivo": 0.215,
+     "entorno": 0.325
+    },
+    {
+     "data": "2025-09-11",
+     "pivo": 0.22,
+     "entorno": 0.335
+    },
+    {
+     "data": "2025-09-18",
+     "pivo": 0.195,
+     "entorno": 0.321
+    },
+    {
+     "data": "2025-09-21",
+     "pivo": 0.161,
+     "entorno": 0.327
+    },
+    {
+     "data": "2025-09-26",
+     "pivo": 0.165,
+     "entorno": 0.337
+    },
+    {
+     "data": "2025-09-28",
+     "pivo": 0.155,
+     "entorno": 0.332
+    },
+    {
+     "data": "2025-10-06",
+     "pivo": 0.181,
+     "entorno": 0.33
+    },
+    {
+     "data": "2025-10-21",
+     "pivo": 0.321,
+     "entorno": 0.245
+    }
+   ],
+   "outorgas_proximas": [
+    {
+     "km": 2.6,
+     "ato": "2026",
+     "captacao": "Captação superficial direta",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 2.93,
+     "ato": "3220",
+     "captacao": "Captação superficial direta",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    },
+    {
+     "km": 2.93,
+     "ato": "2880",
+     "captacao": "Captação superficial direta",
+     "situacao": "Instalado",
+     "dominio": "Estadual",
+     "mesma_subbacia": false,
+     "area_declarada_ha": null
+    }
+   ]
+  }
+ ]
+}

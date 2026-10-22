@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Irrigação sem Outorga com IA · apresentação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#0d1714}
+#palco section h1,#palco section h2,#palco section h3,#palco section p{margin:0}
+#palco section ul{margin:0;padding-left:1.1em}
+#palco section li{margin:.15em 0}
+#palco section{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden;display:none!important}
+#palco section.ativo{display:flex!important}
+#palco{position:absolute;width:1920px;height:1080px;transform-origin:0 0}
+.barra{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;gap:10px;padding:8px 14px;
+        font:13px "Segoe UI",Arial,sans-serif;color:#cfd8d3;background:rgba(13,23,20,.86)}
+.barra a{color:#cfd8d3}
+.barra button{background:#24352f;border:0;color:#eef2ec;border-radius:6px;padding:6px 12px;cursor:pointer;font:inherit}
+.barra .esp{flex:1}
+@media print{
+  @page{size:1920px 1080px;margin:0}
+  html,body{background:#fff;height:auto}
+  .barra{display:none}
+  #palco{position:static;transform:none!important}
+  #palco section{position:relative;display:flex!important;page-break-after:always;break-after:page}
+}
+</style>
+</head>
+<body>
+<div id="palco">
+<section id="capa" data-transition="fade" style="background:#15241f;color:#eef2ec;font-family:'Public Sans', Arial, sans-serif;padding:0;display:flex;flex-direction:row;gap:0">
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:40px;padding:128px">
+<p style="font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#7fc7c2;font-weight:600">Um teste exploratório com IA</p>
+<h1 style="font-family:'Source Serif 4', Georgia, serif;font-size:92px;font-weight:600;line-height:1.08;color:#eef2ec">Irrigação sem outorga: um primeiro teste com IA</h1>
+<p style="font-size:32px;line-height:1.4;color:#c3d2cb">O que deu para explorar em poucas horas com dados públicos, imagens de satélite e IA generativa, e o que fica para quem conhece o dado.</p>
+</div>
+<img src="img/5a_satelite_cor.png" alt="Imagem de satélite de agosto de 2025 em Cristalina, com pivôs verdes e pivôs secos" style="width:820px;height:1080px;object-fit:cover">
+</section>
+<section id="pedido" data-transition="fade" style="background:#f3f5f0;color:#15241f;font-family:'Public Sans', Arial, sans-serif;padding:112px 128px 128px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#0e7c7b;font-weight:600">O ponto de partida</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">O pedido, como chegou no formulário</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;flex:1">
+<div style="display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px;background:#fbfcfa;border-left:6px solid #0e7c7b;padding:32px 36px">
+<p style="font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#4f5f58;font-weight:600">Contexto</p>
+<p style="font-family:'Source Serif 4', Georgia, serif;font-size:30px;line-height:1.45;font-style:italic">“Minha intenção é dar início em projeto que visa utilizar inteligência artificial e sensoriamento remoto para identificar áreas irrigadas que não possuem autorização (outorga) para tanto.”</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#fbfcfa;border-left:6px solid #0e7c7b;padding:32px 36px">
+<p style="font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#4f5f58;font-weight:600">Resultado esperado</p>
+<p style="font-family:'Source Serif 4', Georgia, serif;font-size:30px;line-height:1.45;font-style:italic">“Relatórios padronizados que seriam cruzados com o banco de dados das outorgas.”</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#fbfcfa;border-left:6px solid #c8892b;padding:32px 36px">
+<p style="font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#4f5f58;font-weight:600">Tarefa e dificuldade</p>
+<p style="font-family:'Source Serif 4', Georgia, serif;font-size:30px;line-height:1.45;font-style:italic">“Atualmente a identificação de áreas irrigadas, principalmente pivôs, é feita manualmente através de observações de imagens de satélite. […] são feitos apenas quando surge uma demanda específica. A ideia aqui seria automatizar essa análise e rodá-la em períodos estratégicos como por exemplo a época de seca no estado de Goiás. […] o foco inicial seria em bacias que apresentam criticidade hídrica.”</p>
+</div>
+</div>
+</section>
+<section id="teste" data-transition="fade" style="background:#f3f5f0;color:#15241f;font-family:'Public Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:56px">
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Como foi este teste</h2>
+<div style="display:flex;flex-direction:row;gap:48px">
+<div style="flex:1;display:flex;flex-direction:column;gap:24px;background:#dcebe9;border-radius:16px;padding:48px">
+<p style="font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#0e7c7b;font-weight:600">O que foi feito</p>
+<ul style="font-size:32px;line-height:1.45">
+<li>Algumas horas de trabalho com IAs, uma conferindo a outra</li>
+<li>Só dados públicos: o servidor de mapas da SEMAD-GO e imagens Sentinel-2</li>
+<li>Cada resultado foi checado nos dados antes do passo seguinte</li>
+</ul>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px;background:#e4e9e3;border-radius:16px;padding:48px">
+<p style="font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#4f5f58;font-weight:600">O que não tínhamos</p>
+<ul style="font-size:32px;line-height:1.45">
+<li>Os sistemas internos e o histórico das análises da equipe</li>
+<li>O conhecimento de campo de quem acompanha essas áreas</li>
+<li>Tempo para validar os resultados com quem conhece os casos</li>
+</ul>
+</div>
+</div>
+<p style="font-size:34px;line-height:1.4;color:#4f5f58">Os números a seguir são preliminares. Servem para explorar o caminho, não como resultado final.</p>
+</section>
+<section id="dados" data-transition="fade" style="background:#f3f5f0;color:#15241f;font-family:'Public Sans', Arial, sans-serif;padding:96px 128px 160px;display:flex;flex-direction:row;gap:64px;align-items:center">
+<img src="img/1_goias_pivos.png" alt="Mapa de Goiás com os pivôs mapeados em laranja e as bacias críticas Meia Ponte, Rio Vermelho e Alto São Marcos em verde-água" style="width:800px;height:800px;object-fit:contain">
+<div style="flex:1;display:flex;flex-direction:column;gap:40px">
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Os dados já existem, e são públicos</h2>
+<div style="display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:4px"><p style="font-size:72px;font-weight:700;color:#9a6414;line-height:1.05">5.586</p><p style="font-size:30px;color:#4f5f58">pivôs mapeados pela SEMAD até 2023 (305 mil ha)</p></div>
+<div style="display:flex;flex-direction:column;gap:4px"><p style="font-size:72px;font-weight:700;color:#0e7c7b;line-height:1.05">6.121</p><p style="font-size:30px;color:#4f5f58">outorgas de irrigação, cada uma com o ponto de captação</p></div>
+<div style="display:flex;flex-direction:column;gap:4px"><p style="font-size:72px;font-weight:700;color:#15241f;line-height:1.05">8</p><p style="font-size:30px;color:#4f5f58">bacias críticas delimitadas</p></div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#4f5f58">Fonte: servidor de mapas público da SEMAD-GO (SIGA, WFS), consultado em 21/10/2026. Pontos laranja: pivôs da camada “Pivôs Centrais 2023” (inspeção visual em imagens PlanetScope de 2020 a 2023). Áreas verde-água: bacias críticas.</p>
+</section>
+<section id="bases" data-transition="fade" style="background:#f3f5f0;color:#15241f;font-family:'Public Sans', Arial, sans-serif;padding:96px 128px 160px;display:flex;flex-direction:row;gap:64px;align-items:center">
+<div style="flex:1;display:flex;flex-direction:column;gap:40px">
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Mas as duas bases não conversam</h2>
+<div style="display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:row;gap:20px;align-items:center"><div style="width:40px;height:40px;background:#5fa8a6;border-radius:50%;flex:none"></div><p style="font-size:32px">O pivô é uma área, um círculo no mapa</p></div>
+<div style="display:flex;flex-direction:row;gap:20px;align-items:center"><div style="width:40px;height:40px;background:#c8892b;clip-path:polygon(50% 0,100% 100%,0 100%);flex:none"></div><p style="font-size:32px">A outorga é um ponto: onde a água é captada</p></div>
+</div>
+<p style="font-size:32px;line-height:1.45;color:#4f5f58">Nenhum código liga um ao outro. A captação pode ficar longe do pivô, ser um poço ou um barramento que atende vários pivôs.</p>
+</div>
+<img src="img/2_cristalina_zoom_v2.png" alt="Recorte de Cristalina com 172 pivôs em verde-água e 90 pontos de captação em laranja; ao lado, o mapa de Goiás com o recorte marcado em vermelho" style="width:900px;height:720px;object-fit:contain">
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#4f5f58">Recorte em Cristalina (quadro vermelho). Pivôs: camada “Pivôs Centrais 2023” da SEMAD-GO, mapeada à mão em imagens PlanetScope de 2020 a 2023. Triângulos: pontos de captação outorgados para irrigação.</p>
+</section>
+<section id="satelite" data-transition="fade" style="background:#f3f5f0;color:#15241f;font-family:'Public Sans', Arial, sans-serif;padding:96px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">O que o satélite mostra numa data da seca</h2>
+<div style="display:flex;flex-direction:row;gap:36px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:12px">
+<img src="img/5a_satelite_cor.png" alt="Sentinel-2 em cor natural, Cristalina, 1º de agosto de 2025: pivôs verdes entre áreas secas" style="width:580px;height:600px;object-fit:cover;border-radius:12px">
+<p style="font-size:24px;color:#4f5f58">Cor natural</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<img src="img/5b_satelite_ndvi.png" alt="Mesmo recorte em NDVI: pivôs irrigados em verde-escuro, solo exposto em laranja" style="width:580px;height:600px;object-fit:cover;border-radius:12px">
+<p style="font-size:24px;color:#4f5f58">NDVI: verde-escuro = vegetação ativa</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:2px"><p style="font-size:72px;font-weight:700;color:#15241f;line-height:1.05">54</p><p style="font-size:28px;color:#4f5f58">pivôs do mapa da SEMAD no recorte</p></div>
+<div style="display:flex;flex-direction:column;gap:2px"><p style="font-size:72px;font-weight:700;color:#2f6e3a;line-height:1.05">21</p><p style="font-size:28px;color:#4f5f58">verdes nesta data</p></div>
+<div style="display:flex;flex-direction:column;gap:2px"><p style="font-size:72px;font-weight:700;color:#9a6414;line-height:1.05">23</p><p style="font-size:28px;color:#4f5f58">secos: colhidos, em descanso ou parados?</p></div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#4f5f58">Sentinel-2, 1º/8/2025, Cristalina, recorte de cerca de 13 km. Contorno branco: pivô no mapa de 2023 da SEMAD. Verde: NDVI acima de 0,6; seco: abaixo de 0,35.</p>
+</section>
+<section id="serie" data-transition="fade" style="background:#f3f5f0;color:#15241f;font-family:'Public Sans', Arial, sans-serif;padding:112px 128px 168px;display:flex;flex-direction:column;gap:44px">
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">O que separa um pivô é a série, não uma data</h2>
+<div style="display:flex;flex-direction:row;gap:40px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#fbfcfa;border:1px solid #d6ddd7;border-radius:16px;padding:40px">
+<p style="font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#4f5f58;font-weight:600">Uma data de agosto</p>
+<p style="font-size:96px;font-weight:700;line-height:1;color:#9a6414">0,44</p>
+<p style="font-size:30px;line-height:1.4">Pivôs e áreas vizinhas com NDVI parecido. Não separa.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#dcebe9;border:1px solid #b9d6d3;border-radius:16px;padding:40px">
+<p style="font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#0e7c7b;font-weight:600">Maio a outubro</p>
+<p style="font-size:96px;font-weight:700;line-height:1;color:#0e7c7b">0,84</p>
+<p style="font-size:30px;line-height:1.4">A variação ao longo da seca separou bem os pivôs.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;justify-content:center">
+<p style="font-size:30px;line-height:1.45">O pivô fica verde em parte da seca, quando o entorno seca. A seca é a <b>janela</b> para coletar imagens; o <b>critério</b> é o comportamento ao longo dela.</p>
+<p style="font-size:26px;line-height:1.4;color:#4f5f58">AUC: 0,5 não separa; 1 separa tudo.</p>
+</div>
+</div>
+<p style="font-size:30px;line-height:1.4;color:#4f5f58">É o caminho da literatura: métricas da série e um classificador treinado com casos que o analista conhece.</p>
+<p style="position:absolute;left:128px;bottom:56px;width:1664px;font-size:24px;line-height:1.35;color:#4f5f58">Teste preliminar: recorte de 31 × 20 km no sudeste de Goiás, 20 pivôs do mapa da SEMAD e 150 áreas de referência, Sentinel-2 de maio a outubro de 2025. Conta por pixel e sem a correção do Sentinel-2: vale refazer.</p>
+</section>
+<section id="cruzamento" data-transition="fade" data-section="O que o teste ensinou." style="background:#e4e9e3;color:#15241f;font-family:'Public Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:40px">
+<p style="font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#0e7c7b;font-weight:600">Primeiro cruzamento, feito com IA em poucos minutos</p>
+<div style="display:flex;flex-direction:row;gap:96px;align-items:end">
+<div style="display:flex;flex-direction:column;gap:4px"><p style="font-size:160px;font-weight:700;line-height:1;color:#15241f">2.550</p><p style="font-size:32px;color:#4f5f58">pivôs</p></div>
+<div style="display:flex;flex-direction:column;gap:4px"><p style="font-size:160px;font-weight:700;line-height:1;color:#15241f">139 mil</p><p style="font-size:32px;color:#4f5f58">hectares</p></div>
+</div>
+<p style="font-size:40px;line-height:1.35">mapeados sem nenhuma outorga a até 2 km.</p>
+<p style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;color:#0e7c7b;line-height:1.15">Um bom ponto de partida, que ainda não é a resposta.</p>
+</section>
+<section id="engana" data-transition="fade" style="background:#f3f5f0;color:#15241f;font-family:'Public Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:56px">
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Por que esse primeiro número ainda não é a resposta</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;gap:24px">
+<div style="display:flex;flex-direction:column;gap:14px;background:#fbfcfa;border:1px solid #d6ddd7;border-top:6px solid #b4472f;border-radius:12px;padding:32px">
+<h3 style="font-size:32px;font-weight:700;line-height:1.2">Fora de Goiás</h3>
+<p style="font-size:26px;line-height:1.4;color:#4f5f58">Parte dos pivôs está em Minas e no DF. Lá a outorga é de outro órgão.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px;background:#fbfcfa;border:1px solid #d6ddd7;border-top:6px solid #b4472f;border-radius:12px;padding:32px">
+<h3 style="font-size:32px;font-weight:700;line-height:1.2">Contado duas vezes</h3>
+<p style="font-size:26px;line-height:1.4;color:#4f5f58">Quatro camadas de pivôs descrevem os mesmos pivôs.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px;background:#fbfcfa;border:1px solid #d6ddd7;border-top:6px solid #b4472f;border-radius:12px;padding:32px">
+<h3 style="font-size:32px;font-weight:700;line-height:1.2">Rio federal</h3>
+<p style="font-size:26px;line-height:1.4;color:#4f5f58">A outorga é da ANA e não está nessa base.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px;background:#fbfcfa;border:1px solid #d6ddd7;border-top:6px solid #b4472f;border-radius:12px;padding:32px">
+<h3 style="font-size:32px;font-weight:700;line-height:1.2">Captação longe</h3>
+<p style="font-size:26px;line-height:1.4;color:#4f5f58">A água pode vir de um ponto distante ou de um barramento.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px;background:#fbfcfa;border:1px solid #d6ddd7;border-top:6px solid #b4472f;border-radius:12px;padding:32px">
+<h3 style="font-size:32px;font-weight:700;line-height:1.2">Poço</h3>
+<p style="font-size:26px;line-height:1.4;color:#4f5f58">Captação subterrânea tem regras próprias.</p>
+</div>
+</div>
+<p style="font-size:40px;line-height:1.35;color:#15241f">Cada motivo vem de <b>conhecer o assunto</b>. É aí que quem trabalha com esses dados faz a diferença.</p>
+</section>
+<section id="ajustes1" data-transition="fade" style="background:#f3f5f0;color:#15241f;font-family:'Public Sans', Arial, sans-serif;padding:96px 128px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#0e7c7b;font-weight:600">Ajustes ao longo do teste</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Duas correções que vieram de olhar o dado</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;flex:1">
+<div style="display:flex;flex-direction:row;gap:32px;background:#fbfcfa;border:1px solid #d6ddd7;border-radius:16px;padding:36px;align-items:center">
+<img src="img/3_sao_marcos_fora.png" alt="Pivôs da camada da bacia do São Marcos: em verde-água os que estão em Goiás, em vermelho os que estão em Minas Gerais e no Distrito Federal" style="width:270px;height:500px;object-fit:contain">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-size:34px;font-weight:700;line-height:1.2">Pivôs fora de Goiás</h3>
+<p style="font-size:28px;line-height:1.45;color:#4f5f58">Pivôs a 22 km da outorga mais próxima ganharam uma explicação técnica, que não se confirmou. 812 dos 1.663 pivôs da camada de São Marcos estão em Minas e no DF (em vermelho).</p>
+<p style="font-size:28px;line-height:1.45"><b>Ajuste:</b> considerar só Goiás.</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px;background:#fbfcfa;border:1px solid #d6ddd7;border-radius:16px;padding:36px">
+<img src="img/4_regra_rio_acima.png" alt="Esquema de um rio com várias outorgas. Um pivô na cabeceira não tem nenhuma outorga rio acima; um pivô rio abaixo tem todas" style="width:700px;height:300px;object-fit:contain">
+<h3 style="font-size:34px;font-weight:700;line-height:1.2">A regra que media a posição no rio</h3>
+<p style="font-size:28px;line-height:1.45;color:#4f5f58">Contar qualquer outorga rio acima deixava a cabeceira sem cobertura e o rio abaixo sempre coberto.</p>
+<p style="font-size:28px;line-height:1.45"><b>Ajuste:</b> mesma sub-bacia e distância.</p>
+</div>
+</div>
+</section>
+<section id="ajustes2" data-transition="fade" style="background:#f3f5f0;color:#15241f;font-family:'Public Sans', Arial, sans-serif;padding:112px 128px 128px;display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#0e7c7b;font-weight:600">Ajustes ao longo do teste</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">E duas que mostram os limites de hoje</h2>
+</div>
+<div style="display:flex;flex-direction:row;gap:40px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#fbfcfa;border:1px solid #d6ddd7;border-radius:16px;padding:44px">
+<h3 style="font-size:34px;font-weight:700;line-height:1.2">A ligação ficou rígida</h3>
+<div style="display:flex;flex-direction:row;gap:40px">
+<div style="display:flex;flex-direction:column;gap:4px"><p style="font-size:88px;font-weight:700;line-height:1;color:#9a6414">73%</p><p style="font-size:26px;color:#4f5f58">sem outorga localizável</p></div>
+<div style="display:flex;flex-direction:column;gap:4px"><p style="font-size:88px;font-weight:700;line-height:1;color:#0e7c7b">41%</p><p style="font-size:26px;color:#4f5f58">desses com outorga a até 2 km</p></div>
+</div>
+<p style="font-size:28px;line-height:1.45;color:#4f5f58">Sem um código que ligue pivô e outorga, a regra automática fica entre generosa e rígida demais.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#fbfcfa;border:1px solid #d6ddd7;border-radius:16px;padding:44px">
+<h3 style="font-size:34px;font-weight:700;line-height:1.2">Uma correção do satélite</h3>
+<div style="display:flex;flex-direction:row;gap:40px">
+<div style="display:flex;flex-direction:column;gap:4px"><p style="font-size:88px;font-weight:700;line-height:1;color:#9a6414">74</p><p style="font-size:26px;color:#4f5f58">secos, sem a correção</p></div>
+<div style="display:flex;flex-direction:column;gap:4px"><p style="font-size:88px;font-weight:700;line-height:1;color:#0e7c7b">50</p><p style="font-size:26px;color:#4f5f58">secos, com a correção</p></div>
+</div>
+<p style="font-size:28px;line-height:1.45;color:#4f5f58">O Sentinel-2 soma um valor fixo às imagens desde 2022. Sem descontar, os pivôs parecem mais secos (79 pivôs, 13/8/2025).</p>
+</div>
+</div>
+</section>
+<section id="licao" data-transition="fade" style="background:#15241f;color:#eef2ec;font-family:'Public Sans', Arial, sans-serif;padding:160px;display:flex;flex-direction:column;justify-content:center;gap:56px">
+<p style="font-family:'Source Serif 4', Georgia, serif;font-size:80px;font-weight:600;line-height:1.15;color:#eef2ec">Em poucas horas, a IA chegou longe. Cada ajuste veio de alguém conferindo o dado.</p>
+<p style="font-size:36px;line-height:1.4;color:#a9c9c3">Com o conhecimento da equipe e mais tempo, o resultado tende a ser bem melhor do que este primeiro teste.</p>
+</section>
+<section id="feito" data-transition="fade" data-section="Caminho, cuidados e próximos passos." style="background:#f3f5f0;color:#15241f;font-family:'Public Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:56px">
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">O que já foi possível em poucas horas</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:28px 56px">
+<div style="display:flex;flex-direction:row;gap:20px;align-items:start"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:44px;height:44px;color:#0e7c7b;flex:none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><p style="font-size:32px;line-height:1.4">Achar e ler os dados públicos da SEMAD</p></div>
+<div style="display:flex;flex-direction:row;gap:20px;align-items:start"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:44px;height:44px;color:#0e7c7b;flex:none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><p style="font-size:32px;line-height:1.4">Juntar quatro camadas de pivôs sem duplicatas</p></div>
+<div style="display:flex;flex-direction:row;gap:20px;align-items:start"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:44px;height:44px;color:#0e7c7b;flex:none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><p style="font-size:32px;line-height:1.4">Cruzar pivôs e outorgas em cerca de 1 minuto</p></div>
+<div style="display:flex;flex-direction:row;gap:20px;align-items:start"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:44px;height:44px;color:#0e7c7b;flex:none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><p style="font-size:32px;line-height:1.4">Classificar a ligação em níveis de evidência</p></div>
+<div style="display:flex;flex-direction:row;gap:20px;align-items:start"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:44px;height:44px;color:#0e7c7b;flex:none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><p style="font-size:32px;line-height:1.4">Ler imagens Sentinel-2 sem login e sem custo</p></div>
+<div style="display:flex;flex-direction:row;gap:20px;align-items:start"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:44px;height:44px;color:#0e7c7b;flex:none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><p style="font-size:32px;line-height:1.4">Testar uma ideia de detecção e achar uma melhor</p></div>
+</div>
+<p style="font-size:34px;line-height:1.4;color:#4f5f58">Tudo com dados públicos e código escrito pelas IAs, que roda num computador comum.</p>
+</section>
+<section id="caminho" data-transition="fade" style="background:#f3f5f0;color:#15241f;font-family:'Public Sans', Arial, sans-serif;padding:112px 128px 128px;display:flex;flex-direction:column;gap:48px">
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">O caminho, e até onde o teste chegou</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;flex:1">
+<div style="display:flex;flex-direction:column;gap:12px;background:#fbfcfa;border:1px solid #d6ddd7;border-radius:16px;padding:36px">
+<p style="font-size:24px;font-weight:700;color:#0e7c7b">1</p>
+<h3 style="font-size:34px;font-weight:700;line-height:1.2">Base de pivôs</h3>
+<p style="font-size:26px;line-height:1.4;color:#4f5f58">Mapa estadual de 2023 e atualizações por bacia (Araguaia 2025, São Marcos 2026).</p>
+<p style="font-size:24px;font-weight:600;background:#dfeee1;color:#2f6e3a;padding:6px 18px;border-radius:999px;align-self:start">Já existe</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#dcebe9;border:1px solid #b9d6d3;border-radius:16px;padding:36px">
+<p style="font-size:24px;font-weight:700;color:#0e7c7b">2</p>
+<h3 style="font-size:34px;font-weight:700;line-height:1.2">Detectar irrigação</h3>
+<p style="font-size:26px;line-height:1.4;color:#4f5f58">Série de imagens da seca e um classificador treinado com casos do analista.</p>
+<p style="font-size:24px;font-weight:600;background:#f6e9d3;color:#8a5a0f;padding:6px 18px;border-radius:999px;align-self:start">Teste inicial</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#fbfcfa;border:1px solid #d6ddd7;border-radius:16px;padding:36px">
+<p style="font-size:24px;font-weight:700;color:#0e7c7b">3</p>
+<h3 style="font-size:34px;font-weight:700;line-height:1.2">Atualizar o mapa</h3>
+<p style="font-size:26px;line-height:1.4;color:#4f5f58">Hoje feito à mão, bacia a bacia. A peça 2 pode acelerar.</p>
+<p style="font-size:24px;font-weight:600;background:#f6e9d3;color:#8a5a0f;padding:6px 18px;border-radius:999px;align-self:start">A construir</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#fbfcfa;border:1px solid #d6ddd7;border-radius:16px;padding:36px">
+<p style="font-size:24px;font-weight:700;color:#0e7c7b">4</p>
+<h3 style="font-size:34px;font-weight:700;line-height:1.2">Ligar à outorga</h3>
+<p style="font-size:26px;line-height:1.4;color:#4f5f58">Hoje por proximidade. Fica confiável com um código interno.</p>
+<p style="font-size:24px;font-weight:600;background:#dfeee1;color:#2f6e3a;padding:6px 18px;border-radius:999px;align-self:start">Primeira versão</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#fbfcfa;border:1px solid #d6ddd7;border-radius:16px;padding:36px">
+<p style="font-size:24px;font-weight:700;color:#0e7c7b">5</p>
+<h3 style="font-size:34px;font-weight:700;line-height:1.2">Ficha de cada caso</h3>
+<p style="font-size:26px;line-height:1.4;color:#4f5f58">Imagens, série da seca e outorgas próximas.</p>
+<p style="font-size:24px;font-weight:600;background:#dfeee1;color:#2f6e3a;padding:6px 18px;border-radius:999px;align-self:start">Protótipo</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#fbfcfa;border:1px solid #d6ddd7;border-radius:16px;padding:36px">
+<p style="font-size:24px;font-weight:700;color:#0e7c7b">6</p>
+<h3 style="font-size:34px;font-weight:700;line-height:1.2">Validação</h3>
+<p style="font-size:26px;line-height:1.4;color:#4f5f58">O analista marca o que vê; sai o relatório. A decisão é do órgão.</p>
+<p style="font-size:24px;font-weight:600;background:#0e7c7b;color:#f3f5f0;padding:6px 18px;border-radius:999px;align-self:start">Pessoa</p>
+</div>
+</div>
+</section>
+<section id="triagem" data-transition="fade" style="background:#f3f5f0;color:#15241f;font-family:'Public Sans', Arial, sans-serif;padding:96px 128px 128px;display:flex;flex-direction:row;gap:64px;align-items:center">
+<div style="flex:1;display:flex;flex-direction:column;gap:36px">
+<p style="font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#0e7c7b;font-weight:600">Depois do encontro</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Um protótipo de triagem</h2>
+<p style="font-size:32px;line-height:1.45;color:#4f5f58">O computador junta os casos, as imagens e as outorgas próximas. A pessoa olha um caso de cada vez e marca o que vê.</p>
+<div style="display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:row;gap:20px;align-items:start"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:40px;height:40px;color:#0e7c7b;flex:none" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><p style="font-size:30px;line-height:1.4">Imagem da seca de 2022 e de 2025, e o verde do pivô ao longo da seca</p></div>
+<div style="display:flex;flex-direction:row;gap:20px;align-items:start"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:40px;height:40px;color:#0e7c7b;flex:none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><p style="font-size:30px;line-height:1.4">Quatro respostas, inclusive "tem outorga que eu conheço"</p></div>
+<div style="display:flex;flex-direction:row;gap:20px;align-items:start"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:40px;height:40px;color:#0e7c7b;flex:none" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/></svg><p style="font-size:30px;line-height:1.4">Relatório e tabela prontos ao final, sem concluir irregularidade</p></div>
+</div>
+</div>
+<img src="img/7_triagem.png" alt="Tela do protótipo de triagem: imagem de satélite de um pivô, gráfico de NDVI e os botões de decisão" style="width:980px;height:760px;object-fit:contain;border-radius:12px;box-shadow:0 12px 40px rgba(21,36,31,.18)">
+<p style="position:absolute;left:128px;bottom:56px;width:1664px;font-size:24px;color:#4f5f58">Protótipo montado por outra IA (DeepSeek) a partir da conversa e ajustado depois. 18 pivôs reais do mapa público em que a regra simples não achou outorga.</p>
+</section>
+<section id="fases" data-transition="fade" style="background:#f3f5f0;color:#15241f;font-family:'Public Sans', Arial, sans-serif;padding:112px 128px 128px;display:flex;flex-direction:column;gap:48px">
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Por que começar pela triagem</h2>
+<p style="font-size:32px;line-height:1.45;color:#4f5f58">Para ensinar um programa a achar pivô irrigado, faltam exemplos conferidos. Cada marcação na triagem é um exemplo. Uma possível sequência:</p>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;flex:1">
+<div style="display:flex;flex-direction:column;gap:16px;background:#dcebe9;border:1px solid #b9d6d3;border-radius:16px;padding:40px">
+<p style="font-size:24px;font-weight:700;color:#0e7c7b">1 · Triagem</p>
+<h3 style="font-size:36px;font-weight:700;line-height:1.2">Uma bacia, uma estação seca</h3>
+<p style="font-size:28px;line-height:1.4;color:#4f5f58">Revisar algumas dezenas de casos e ver se o relatório serve ao trabalho.</p>
+<p style="font-size:24px;font-weight:600;background:#f6e9d3;color:#8a5a0f;padding:6px 18px;border-radius:999px;align-self:start">Protótipo pronto</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;background:#fbfcfa;border:1px solid #d6ddd7;border-radius:16px;padding:40px">
+<p style="font-size:24px;font-weight:700;color:#0e7c7b">2 · Piloto</p>
+<h3 style="font-size:36px;font-weight:700;line-height:1.2">Fila periódica, com registro</h3>
+<p style="font-size:28px;line-height:1.4;color:#4f5f58">Um servidor da SEMAD, login e histórico. Algumas centenas de casos marcados.</p>
+<p style="font-size:24px;font-weight:600;background:#e4e9e3;color:#4f5f58;padding:6px 18px;border-radius:999px;align-self:start">Depende da SEMAD</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;background:#fbfcfa;border:1px solid #d6ddd7;border-radius:16px;padding:40px">
+<p style="font-size:24px;font-weight:700;color:#0e7c7b">3 · Detector</p>
+<h3 style="font-size:36px;font-weight:700;line-height:1.2">Treinado com as marcações</h3>
+<p style="font-size:28px;line-height:1.4;color:#4f5f58">Série de imagens e um classificador. O erro é medido contra os casos conferidos.</p>
+<p style="font-size:24px;font-weight:600;background:#e4e9e3;color:#4f5f58;padding:6px 18px;border-radius:999px;align-self:start">Pesquisa</p>
+</div>
+</div>
+<p style="font-size:26px;line-height:1.4;color:#4f5f58">É o mesmo princípio do DETER, do INPE: alerta automático, verificação humana e só então o laudo.</p>
+</section>
+<section id="ia" data-transition="fade" style="background:#f3f5f0;color:#15241f;font-family:'Public Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:56px">
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Onde a IA generativa entra, e onde a decisão é sua</h2>
+<div style="display:flex;flex-direction:row;gap:48px;flex:1">
+<div style="flex:1;display:flex;flex-direction:column;gap:28px;background:#fbfcfa;border:1px solid #d6ddd7;border-radius:16px;padding:52px">
+<div style="display:flex;flex-direction:row;gap:16px;align-items:center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:44px;height:44px;color:#0e7c7b;flex:none" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg><p style="font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#0e7c7b;font-weight:600">A IA faz</p></div>
+<ul style="font-size:34px;line-height:1.45">
+<li>Escreve e corrige o código de cada peça</li>
+<li>Explora os dados e acha inconsistências</li>
+<li>Redige a ficha de cada caso e o relatório</li>
+<li>Lê normas e documentos, para você conferir</li>
+</ul>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:28px;background:#dcebe9;border:1px solid #b9d6d3;border-radius:16px;padding:52px">
+<div style="display:flex;flex-direction:row;gap:16px;align-items:center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:44px;height:44px;color:#0e7c7b;flex:none" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><p style="font-size:24px;letter-spacing:3px;text-transform:uppercase;color:#0e7c7b;font-weight:600">Você decide</p></div>
+<ul style="font-size:34px;line-height:1.45">
+<li>Qual regra vale</li>
+<li>O que é caso para fiscalização</li>
+<li>O que entra no processo e no relatório</li>
+<li>Quando o resultado está bom o bastante</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="achados" data-transition="fade" style="background:#e4e9e3;color:#15241f;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Achados que já saem dos dados</h2>
+<div style="display:flex;flex-direction:row;gap:36px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#fbfcfa;border-radius:16px;padding:44px">
+<p style="font-size:112px;font-weight:700;line-height:1;color:#9a6414">10%</p>
+<p style="font-size:30px;line-height:1.4">das outorgas de irrigação têm a área irrigada preenchida (585 de 6.121)</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#fbfcfa;border-radius:16px;padding:44px">
+<p style="font-size:112px;font-weight:700;line-height:1;color:#0e7c7b">2.518</p>
+<p style="font-size:30px;line-height:1.4">outorgas de irrigação marcadas como “não instaladas”</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#fbfcfa;border-radius:16px;padding:44px">
+<p style="font-size:112px;font-weight:700;line-height:1;color:#15241f">42</p>
+<p style="font-size:30px;line-height:1.4">em rio federal: as outorgas da ANA não estão nessa base</p>
+</div>
+</div>
+<p style="font-size:36px;line-height:1.4;color:#4f5f58">Nenhum desses achados precisou de IA para detectar pivô. Vieram de olhar a tabela.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#4f5f58">Camada pública de usos outorgados da SEMAD-GO, finalidades de irrigação, consultada em 21/10/2026.</p>
+</section>
+<section id="cuidados" data-transition="fade" style="background:#f3f5f0;color:#15241f;font-family:'Public Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:56px">
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Quatro cuidados</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;flex:1">
+<div style="display:flex;flex-direction:column;gap:12px;background:#fbfcfa;border:1px solid #d6ddd7;border-radius:16px;padding:44px">
+<h3 style="font-size:36px;font-weight:700;line-height:1.2">Não é lista de infratores</h3>
+<p style="font-size:30px;line-height:1.4;color:#4f5f58">A automação aponta casos para conferir. Quem decide e autua é o órgão, no processo.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#fbfcfa;border:1px solid #d6ddd7;border-radius:16px;padding:44px">
+<h3 style="font-size:36px;font-weight:700;line-height:1.2">Verde não prova irrigação</h3>
+<p style="font-size:30px;line-height:1.4;color:#4f5f58">A safrinha pode estar verde em agosto. Comparar com o entorno e repetir em várias datas.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#fbfcfa;border:1px solid #d6ddd7;border-radius:16px;padding:44px">
+<h3 style="font-size:36px;font-weight:700;line-height:1.2">Dados pessoais fora da IA pública</h3>
+<p style="font-size:30px;line-height:1.4;color:#4f5f58">Outorga e CAR trazem nomes e CNPJ. Trabalhar com a tabela sem essas colunas.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#fbfcfa;border:1px solid #d6ddd7;border-radius:16px;padding:44px">
+<h3 style="font-size:36px;font-weight:700;line-height:1.2">Conferir antes de citar</h3>
+<p style="font-size:30px;line-height:1.4;color:#4f5f58">Lei, norma, número ou artigo vindo de IA só entra num documento depois de lido na fonte.</p>
+</div>
+</div>
+</section>
+<section id="conversa" data-transition="fade" style="background:#f3f5f0;color:#15241f;font-family:'Public Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:56px">
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Para conversar</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:36px 64px">
+<div style="display:flex;flex-direction:column;gap:10px"><h3 style="font-size:34px;font-weight:700;line-height:1.25;color:#0e7c7b">Hoje</h3><p style="font-size:30px;line-height:1.45">Como uma área irrigada sem outorga é descoberta? Que documento sai no fim?</p></div>
+<div style="display:flex;flex-direction:column;gap:10px"><h3 style="font-size:34px;font-weight:700;line-height:1.25;color:#0e7c7b">Desde 2023</h3><p style="font-size:30px;line-height:1.45">As atualizações de 2025 e 2026 foram à mão? Quanto tempo levaram?</p></div>
+<div style="display:flex;flex-direction:column;gap:10px"><h3 style="font-size:34px;font-weight:700;line-height:1.25;color:#0e7c7b">A ligação</h3><p style="font-size:30px;line-height:1.45">O sistema de outorga tem o polígono da área irrigada ou o número do CAR?</p></div>
+<div style="display:flex;flex-direction:column;gap:10px"><h3 style="font-size:34px;font-weight:700;line-height:1.25;color:#0e7c7b">As ferramentas</h3><p style="font-size:30px;line-height:1.45">QGIS, Python, Earth Engine? Que IA está disponível no trabalho, e com que regras?</p></div>
+<div style="display:flex;flex-direction:column;gap:10px"><h3 style="font-size:34px;font-weight:700;line-height:1.25;color:#0e7c7b">A pós</h3><p style="font-size:30px;line-height:1.45">Que peça do caminho vira pesquisa? O que a dissertação precisa entregar?</p></div>
+<div style="display:flex;flex-direction:column;gap:10px"><h3 style="font-size:34px;font-weight:700;line-height:1.25;color:#0e7c7b">A validação</h3><p style="font-size:30px;line-height:1.45">Quem conferiria os casos apontados, e quanto tempo essa pessoa tem?</p></div>
+</div>
+</section>
+<section id="passo" data-transition="fade" style="background:#15241f;color:#eef2ec;font-family:'Public Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:64px">
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1;color:#eef2ec">Possíveis próximos passos</h2>
+<div style="display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:row;gap:40px;align-items:start"><p style="font-family:'Source Serif 4', Georgia, serif;font-size:72px;font-weight:600;line-height:1;color:#e0a548;min-width:80px">1</p><div style="display:flex;flex-direction:column;gap:8px"><h3 style="font-size:40px;font-weight:700;line-height:1.2;color:#eef2ec">Usar a triagem numa bacia crítica</h3><p style="font-size:30px;line-height:1.45;color:#c3d2cb">Revisar algumas dezenas de casos e ver se o relatório serve ao trabalho. Anotar quanto tempo leva cada caso.</p></div></div>
+<div style="display:flex;flex-direction:row;gap:40px;align-items:start"><p style="font-family:'Source Serif 4', Georgia, serif;font-size:72px;font-weight:600;line-height:1;color:#e0a548;min-width:80px">2</p><div style="display:flex;flex-direction:column;gap:8px"><h3 style="font-size:40px;font-weight:700;line-height:1.2;color:#eef2ec">Descobrir o código que liga pivô e outorga</h3><p style="font-size:30px;line-height:1.45;color:#c3d2cb">Polígono da área irrigada, número do CAR ou outro identificador nos sistemas internos.</p></div></div>
+<div style="display:flex;flex-direction:row;gap:40px;align-items:start"><p style="font-family:'Source Serif 4', Georgia, serif;font-size:72px;font-weight:600;line-height:1;color:#e0a548;min-width:80px">3</p><div style="display:flex;flex-direction:column;gap:8px"><h3 style="font-size:40px;font-weight:700;line-height:1.2;color:#eef2ec">Testar a detecção pela série</h3><p style="font-size:30px;line-height:1.45;color:#c3d2cb">Série de imagens da seca e um classificador simples, treinado com os casos marcados. A IA escreve o código; você confere.</p></div></div>
+</div>
+</section>
+</div>
+<div class="barra">
+  <a href="../">← voltar ao site</a>
+  <span class="esp"></span>
+  <button id="ant" aria-label="Slide anterior">←</button>
+  <span id="num"></span>
+  <button id="prox" aria-label="Próximo slide">→</button>
+  <span class="esp"></span>
+  <a href="apresentacao.pdf">baixar PDF</a>
+</div>
+<script>
+const S = [...document.querySelectorAll("#palco section")];
+let i = Math.max(0, Math.min(S.length - 1, (parseInt(location.hash.slice(1)) || 1) - 1));
+function ajustar(){
+  const p = document.getElementById("palco"), h = innerHeight - 44;
+  const e = Math.min(innerWidth / 1920, h / 1080);
+  p.style.transform = `scale(${e})`;
+  p.style.left = (innerWidth - 1920 * e) / 2 + "px";
+  p.style.top = Math.max(0, (h - 1080 * e) / 2) + "px";
+}
+function mostrar(n){
+  i = Math.max(0, Math.min(S.length - 1, n));
+  S.forEach((s, k) => s.classList.toggle("ativo", k === i));
+  document.getElementById("num").textContent = (i + 1) + " / " + S.length;
+  history.replaceState(null, "", "#" + (i + 1));
+}
+document.getElementById("ant").onclick = () => mostrar(i - 1);
+document.getElementById("prox").onclick = () => mostrar(i + 1);
+addEventListener("keydown", e => {
+  if (["ArrowRight", "PageDown", " "].includes(e.key)) { e.preventDefault(); mostrar(i + 1); }
+  if (["ArrowLeft", "PageUp"].includes(e.key)) { e.preventDefault(); mostrar(i - 1); }
+});
+let x0 = null;
+addEventListener("touchstart", e => x0 = e.touches[0].clientX, {passive: true});
+addEventListener("touchend", e => { if (x0 === null) return; const d = e.changedTouches[0].clientX - x0;
+  if (Math.abs(d) > 40) mostrar(i + (d < 0 ? 1 : -1)); x0 = null; });
+addEventListener("resize", ajustar);
+ajustar(); mostrar(i);
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+numpy
+shapely>=2.0
+pyproj
+rasterio
+scipy
+pillow
+matplotlib

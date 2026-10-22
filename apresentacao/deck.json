@@ -1,0 +1,61 @@
+{
+  "v": 4,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-10-21T23:55:00-03:00"
+  },
+  "lists": "css",
+  "title": "Irrigação sem Outorga com IA",
+  "order": [
+    "capa",
+    "pedido",
+    "teste",
+    "dados",
+    "bases",
+    "satelite",
+    "serie",
+    "cruzamento",
+    "engana",
+    "ajustes1",
+    "ajustes2",
+    "licao",
+    "feito",
+    "caminho",
+    "triagem",
+    "fases",
+    "ia",
+    "achados",
+    "cuidados",
+    "conversa",
+    "passo"
+  ],
+  "sections": {
+    "s1": {
+      "description": "O pedido e como foi este teste exploratório.",
+      "start": "capa"
+    },
+    "s2": {
+      "description": "O que os dados públicos e o satélite mostram.",
+      "start": "dados"
+    },
+    "s3": {
+      "description": "O que o teste ensinou, com os ajustes no caminho.",
+      "start": "cruzamento"
+    },
+    "s4": {
+      "description": "Caminho, cuidados e próximos passos.",
+      "start": "feito"
+    }
+  },
+  "faces": {
+    "source-serif-4": {
+      "family": "Source Serif 4",
+      "href": "https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&display=swap"
+    },
+    "public-sans": {
+      "family": "Public Sans",
+      "href": "https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap"
+    }
+  },
+  "designSystems": []
+}

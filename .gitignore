@@ -1,0 +1,6 @@
+# camadas baixadas (grandes, e a de outorgas traz nomes e CPF/CNPJ)
+codigo/.cache/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
